@@ -1,0 +1,24 @@
+{
+  "name": "majaliwa",
+  "version": "1.0.0",
+  "description": "Reality is often disappointing, step into mine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techymaj/majaliwa.git"
+  },
+  "keywords": [
+    "majaliwa",
+    "mbuto",
+    "wilfried"
+  ],
+  "author": "techymaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techymaj/majaliwa/issues"
+  },
+  "homepage": "https://github.com/techymaj/majaliwa#readme"
+}
