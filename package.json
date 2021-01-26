@@ -33,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/techymaj/majaliwa/issues"
   },
-  "homepage": "https://github.com/techymaj/majaliwa#readme"
+  "homepage": "https://github.com/techymaj/majaliwa#readme",
+  "dependencies": {
+    "three": "^0.124.0"
+  }
 }

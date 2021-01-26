@@ -1,0 +1,20 @@
+.container {
+    display: grid;
+    grid-template-columns: 10rem;
+    grid-template-rows: 90vh; 
+    justify-content: center;
+    align-items: center;
+}
+
+.stone {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    // animation: big_bang 3s infinite;
+ 
+    &--reality {
+        border-color: orangered; 
+    }
+}

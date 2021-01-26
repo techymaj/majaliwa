@@ -1,0 +1,23 @@
+@keyframes big_bang {
+  0% {
+    height: 0;
+    width: 0; }
+  100% {
+    height: 10rem;
+    width: 10rem; } }
+
+.container {
+  display: grid;
+  grid-template-columns: 10rem;
+  grid-template-rows: 90vh;
+  justify-content: center;
+  align-items: center; }
+
+.stone {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid; }
+  .stone--reality {
+    border-color: orangered; }
