@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>majaliwa</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-   <div class="container">
-       <div class="stone stone--reality">
-           
-       </div>
-       <!-- <div class="stone stone--space"></div>
-       <div class="stone stone--mind"></div>
-       <div class="stone stone--power"></div>
-       <div class="stone stone--soul"></div>
-       <div class="stone stone--time"></div> -->
-   </div>
-</body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <video
+        id="background-video"
+        autoplay
+        loop
+        muted
+        poster="./assets/img/home.png"
+      >
+        <!-- <source src="./assets/video/home.mp4" type="video/mp4" /> -->
+      </video>
+      <div class="developer">
+        <div class="developer__image">
+          <div class="developer__stones">
+            <!--- Reality can be anything I want (What i've built, highlights of my life) #red-->
+            <div class="developer__stones--reality">
+              <div class="reality">
+                <div class="reality__stone">
+                  <img src="./assets/img/reality.png" alt="My reality" />
+                </div>
+                <div class="reality__title">
+                  <h1>My Reality</h1>
+                </div>
+                <div class="reality__tether"></div>
+              </div>
+            </div>
+            <!--- About me #orange-->
+            <div class="developer__stones--soul"></div>
+            <!--- Skills acquired #purple-->
+            <div class="developer__stones--power"></div>
+            <!--- blog #yellow-->
+            <div class="developer__stones--mind"></div>
+            <!--- Timeline #green-->
+            <div class="developer__stones--time"></div>
+            <!--- Open portals (Opportunities) #blue-->
+            <div class="developer__stones--space"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

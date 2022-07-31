@@ -1,11 +1,39 @@
-@keyframes big_bang {
+@keyframes spin {
     0% {
-        height: 0;
-        width: 0;
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(45deg);
     }
 
     100% {
-        height: 10rem;
-        width: 10rem; 
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes spin-stone {
+    0% {
+        transform: rotate(0);
+    }
+
+    30% {
+        transform: rotate(30deg);
+    }
+
+    45% {
+        transform: rotate(45deg);
+    }
+
+    60% {
+        transform: rotate(60deg);
+    }
+
+    90% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
     }
 }
