@@ -1,7 +1,7 @@
 {
-  "name": "majaliwa",
+  "name": "majaliwa.tech",
   "version": "1.0.0",
-  "description": "Reality is often disappointing, step into mine.",
+  "description": "All there is to know about majaliwa & tech",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
@@ -13,28 +13,33 @@
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.4",
+    "autoprefixer": "^10.4.8",
     "concat": "^1.0.3",
-    "node-sass": "^4.5.3",
-    "npm-run-all": "^4.1.1",
-    "postcss-cli": "^4.1.1"
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/techymaj/majaliwa.git"
   },
   "keywords": [
-    "majaliwa",
-    "mbuto",
-    "wilfried"
+    "Developer",
+    "Technology",
+    "Software",
+    "Mobile",
+    "Apps",
+    "Web",
+    "Apps",
+    "Desktop",
+    "Apps",
+    "Embedded",
+    "Systems"
   ],
   "author": "techymaj",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/techymaj/majaliwa/issues"
   },
-  "homepage": "https://github.com/techymaj/majaliwa#readme",
-  "dependencies": {
-    "three": "^0.124.0"
-  }
+  "homepage": "https://github.com/techymaj/majaliwa#readme"
 }
