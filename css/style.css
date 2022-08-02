@@ -81,11 +81,31 @@ body {
         width: 8rem;
         animation: spin-stone 3s infinite;
         position: relative;
-        left: 2rem; }
+        left: 2rem;
+        top: 4rem; }
       .container .developer__stones--reality .reality__title {
         color: crimson;
         visibility: hidden; }
       .container .developer__stones--reality .reality__tether {
-        width: 160px;
+        position: relative;
+        top: 3rem;
+        left: 3rem;
+        width: 10rem;
         border-bottom: 1px dashed crimson;
         transform: rotate(79deg); }
+    .container .developer__stones--soul .soul__stone img {
+      width: 8rem;
+      animation: spin-stone 3s infinite;
+      position: relative;
+      left: 12rem;
+      top: 30rem; }
+    .container .developer__stones--soul .soul__title {
+      color: orange;
+      visibility: hidden; }
+    .container .developer__stones--soul .soul__tether {
+      position: relative;
+      top: 15.5rem;
+      left: 10rem;
+      width: 10rem;
+      border-bottom: 1px dashed orange;
+      transform: rotate(79deg); }
