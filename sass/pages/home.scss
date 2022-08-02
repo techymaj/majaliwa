@@ -30,8 +30,8 @@
 
   .developer {
     &__image {
-      height: 25rem;
-      width: 25rem;
+      height: 20rem;
+      width: 20rem;
       border-radius: 50%;
       background-image: url(../assets/img/me.jpg);
       background-color: #cccccc;
@@ -46,10 +46,10 @@
 
     &__stones {
       position: relative;
-      height: 25rem;
-      width: 25rem;
+      height: 20rem;
+      width: 20rem;
       border-radius: 50%;
-      border: 2px dashed white;
+      border: 2px dashed wheat;
       //   animation: spin 3s infinite;
       // animation: spin 2s infinite linear;
 
@@ -59,10 +59,10 @@
 
         .reality {
           &__stone img {
-            width: 8rem;
+            width: 6rem;
             animation: spin-stone 3s infinite linear;
             position: relative;
-            left: 2rem;
+            left: 10rem;
             top: 4rem;
           }
 
@@ -72,6 +72,7 @@
           }
 
           &__tether {
+            display: none;
             position: relative;
             top: 3rem;
             left: 3rem;
@@ -83,43 +84,193 @@
       }
 
       &--soul {
+        position: absolute;
 
         .soul {
-            &__stone img {
-              width: 8rem;
-              animation: spin-stone 3s infinite linear;
-              position: relative;
-              left: 12rem;
-              top: 30rem;
-            }
-        
-            &__title {
-              color: orange;
-              visibility: hidden;
-            }
-        
-            &__tether {
-              position: relative;
-              top: 15.5rem;
-              left: 10rem;
-              width: 10rem;
-              border-bottom: 1px dashed orange;
-              transform: rotate(79deg);
-            }
+          &__stone img {
+            width: 6rem;
+            animation: spin-stone 3s infinite linear;
+            position: relative;
+            left: 5rem;
+            top: 30rem;
           }
+
+          &__title {
+            color: orange;
+            visibility: hidden;
+          }
+
+          &__tether {
+            display: none;
+            position: relative;
+            top: 15.5rem;
+            left: 10rem;
+            width: 10rem;
+            border-bottom: 1px dashed orange;
+            transform: rotate(79deg);
+          }
+        }
       }
 
-    //   &--power {
-    //   }
+      &--power {
+        position: absolute;
 
-    //   &--mind {
-    //   }
+        .power {
+          &__stone img {
+            width: 6rem;
+            animation: spin-stone 3s infinite linear;
+            position: relative;
+            right: 16rem;
+            top: -10rem;
+          }
 
-    //   &--time {
-    //   }
+          &__title {
+            color: purple;
+            visibility: hidden;
+          }
 
-    //   &--space {
-    //   }
+          &__tether {
+            display: none;
+            position: relative;
+            top: 15.5rem;
+            left: 10rem;
+            width: 10rem;
+            border-bottom: 1px dashed purple;
+            transform: rotate(79deg);
+          }
+        }
+      }
+
+      &--mind {
+        position: absolute;
+
+        .mind {
+          &__stone img {
+            width: 6rem;
+            animation: spin-stone 3s infinite linear;
+            position: relative;
+            right: 18rem;
+            top: 14rem;
+          }
+
+          &__title {
+            color: yellow;
+            visibility: hidden;
+          }
+
+          &__tether {
+            display: none;
+            // position: relative;
+            // top: 15.5rem;
+            // left: 10rem;
+            // width: 10rem;
+            // border-bottom: 1px dashed yellow;
+            // transform: rotate(79deg);
+          }
+        }
+      }
+
+      &--time {
+        position: absolute;
+
+        .time {
+          &__stone img {
+            width: 6rem;
+            animation: spin-stone 3s infinite linear;
+            position: relative;
+            right: 0;
+            top: 22rem;
+            left: 30rem;
+          }
+
+          &__title {
+            color: green;
+            visibility: hidden;
+          }
+
+          &__tether {
+            display: none;
+            // position: relative;
+            // top: 15.5rem;
+            // left: 10rem;
+            // width: 10rem;
+            // border-bottom: 1px dashed green;
+            // transform: rotate(79deg);
+          }
+        }
+      }
+
+      &--space {
+        position: absolute;
+
+        .space {
+          &__stone img {
+            width: 6rem;
+            animation: spin-stone 3s infinite linear;
+            position: relative;
+            right: 0;
+            top: 0;
+            left: 33rem;
+          }
+
+          &__title {
+            color: blue;
+            visibility: hidden;
+          }
+
+          &__tether {
+            display: none;
+            // position: relative;
+            // top: 15.5rem;
+            // left: 10rem;
+            // width: 10rem;
+            // border-bottom: 1px dashed blue;
+            // transform: rotate(79deg);
+          }
+        }
+      }
+    }
+
+    &__excerpt {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      color: wheat;
+      // text-align: center;
+
+      .name {
+        grid-column: 1 / -1;
+        font-family: $developer-font;
+        font-size: 1.4rem;
+        padding-top: 2rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .title {
+        font-family: $developer-font;
+        text-align: start;
+        padding-top: 1rem;
+      }
+    }
+
+    .socials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0.5rem;
+      column-gap: 1.25rem;
+
+      li {
+        list-style: none;
+      }
+
+      .social-icon {
+        fill: wheat;
+        height: 2rem;
+        width: 2rem;
+        &:hover {
+          animation: none;
+        }
+      }
     }
   }
 }

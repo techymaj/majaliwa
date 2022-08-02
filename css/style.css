@@ -50,8 +50,8 @@ body {
           background-size: cover;
           background-color: transparent; } }
   .container .developer__image {
-    height: 25rem;
-    width: 25rem;
+    height: 20rem;
+    width: 20rem;
     border-radius: 50%;
     background-image: url(../assets/img/me.jpg);
     background-color: #cccccc;
@@ -62,42 +62,133 @@ body {
       animation: none; }
   .container .developer__stones {
     position: relative;
-    height: 25rem;
-    width: 25rem;
+    height: 20rem;
+    width: 20rem;
     border-radius: 50%;
-    border: 2px dashed white; }
+    border: 2px dashed wheat; }
     .container .developer__stones--reality {
       position: absolute;
       top: -20rem; }
       .container .developer__stones--reality .reality__stone img {
-        width: 8rem;
+        width: 6rem;
         animation: spin-stone 3s infinite linear;
         position: relative;
-        left: 2rem;
+        left: 10rem;
         top: 4rem; }
       .container .developer__stones--reality .reality__title {
         color: crimson;
         visibility: hidden; }
       .container .developer__stones--reality .reality__tether {
+        display: none;
         position: relative;
         top: 3rem;
         left: 3rem;
         width: 10rem;
         border-bottom: 1px dashed crimson;
         transform: rotate(79deg); }
-    .container .developer__stones--soul .soul__stone img {
-      width: 8rem;
-      animation: spin-stone 3s infinite linear;
-      position: relative;
-      left: 12rem;
-      top: 30rem; }
-    .container .developer__stones--soul .soul__title {
-      color: orange;
-      visibility: hidden; }
-    .container .developer__stones--soul .soul__tether {
-      position: relative;
-      top: 15.5rem;
-      left: 10rem;
-      width: 10rem;
-      border-bottom: 1px dashed orange;
-      transform: rotate(79deg); }
+    .container .developer__stones--soul {
+      position: absolute; }
+      .container .developer__stones--soul .soul__stone img {
+        width: 6rem;
+        animation: spin-stone 3s infinite linear;
+        position: relative;
+        left: 5rem;
+        top: 30rem; }
+      .container .developer__stones--soul .soul__title {
+        color: orange;
+        visibility: hidden; }
+      .container .developer__stones--soul .soul__tether {
+        display: none;
+        position: relative;
+        top: 15.5rem;
+        left: 10rem;
+        width: 10rem;
+        border-bottom: 1px dashed orange;
+        transform: rotate(79deg); }
+    .container .developer__stones--power {
+      position: absolute; }
+      .container .developer__stones--power .power__stone img {
+        width: 6rem;
+        animation: spin-stone 3s infinite linear;
+        position: relative;
+        right: 16rem;
+        top: -10rem; }
+      .container .developer__stones--power .power__title {
+        color: purple;
+        visibility: hidden; }
+      .container .developer__stones--power .power__tether {
+        display: none;
+        position: relative;
+        top: 15.5rem;
+        left: 10rem;
+        width: 10rem;
+        border-bottom: 1px dashed purple;
+        transform: rotate(79deg); }
+    .container .developer__stones--mind {
+      position: absolute; }
+      .container .developer__stones--mind .mind__stone img {
+        width: 6rem;
+        animation: spin-stone 3s infinite linear;
+        position: relative;
+        right: 18rem;
+        top: 14rem; }
+      .container .developer__stones--mind .mind__title {
+        color: yellow;
+        visibility: hidden; }
+      .container .developer__stones--mind .mind__tether {
+        display: none; }
+    .container .developer__stones--time {
+      position: absolute; }
+      .container .developer__stones--time .time__stone img {
+        width: 6rem;
+        animation: spin-stone 3s infinite linear;
+        position: relative;
+        right: 0;
+        top: 22rem;
+        left: 30rem; }
+      .container .developer__stones--time .time__title {
+        color: green;
+        visibility: hidden; }
+      .container .developer__stones--time .time__tether {
+        display: none; }
+    .container .developer__stones--space {
+      position: absolute; }
+      .container .developer__stones--space .space__stone img {
+        width: 6rem;
+        animation: spin-stone 3s infinite linear;
+        position: relative;
+        right: 0;
+        top: 0;
+        left: 33rem; }
+      .container .developer__stones--space .space__title {
+        color: blue;
+        visibility: hidden; }
+      .container .developer__stones--space .space__tether {
+        display: none; }
+  .container .developer__excerpt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: wheat; }
+    .container .developer__excerpt .name {
+      grid-column: 1 / -1;
+      font-family: "Major Mono Display", monospace;
+      font-size: 1.4rem;
+      padding-top: 2rem;
+      margin-bottom: 1.25rem; }
+    .container .developer__excerpt .title {
+      font-family: "Major Mono Display", monospace;
+      text-align: start;
+      padding-top: 1rem; }
+  .container .developer .socials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0.5rem;
+    column-gap: 1.25rem; }
+    .container .developer .socials li {
+      list-style: none; }
+    .container .developer .socials .social-icon {
+      fill: wheat;
+      height: 2rem;
+      width: 2rem; }
+      .container .developer .socials .social-icon:hover {
+        animation: none; }
