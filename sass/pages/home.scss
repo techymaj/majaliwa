@@ -51,6 +51,7 @@
       border-radius: 50%;
       border: 2px dashed white;
       //   animation: spin 3s infinite;
+      // animation: spin 2s infinite linear;
 
       &--reality {
         position: absolute;
@@ -59,7 +60,7 @@
         .reality {
           &__stone img {
             width: 8rem;
-            animation: spin-stone 3s infinite;
+            animation: spin-stone 3s infinite linear;
             position: relative;
             left: 2rem;
             top: 4rem;
@@ -86,7 +87,7 @@
         .soul {
             &__stone img {
               width: 8rem;
-              animation: spin-stone 3s infinite;
+              animation: spin-stone 3s infinite linear;
               position: relative;
               left: 12rem;
               top: 30rem;

@@ -21,18 +21,10 @@ body {
     transform: rotate(90deg); } }
 
 @keyframes spin-stone {
-  0% {
-    transform: rotate(0); }
-  30% {
-    transform: rotate(30deg); }
-  45% {
-    transform: rotate(45deg); }
-  60% {
-    transform: rotate(60deg); }
-  90% {
-    transform: rotate(90deg); }
-  100% {
-    transform: rotate(180deg); } }
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
 
 .container {
   display: grid;
@@ -79,7 +71,7 @@ body {
       top: -20rem; }
       .container .developer__stones--reality .reality__stone img {
         width: 8rem;
-        animation: spin-stone 3s infinite;
+        animation: spin-stone 3s infinite linear;
         position: relative;
         left: 2rem;
         top: 4rem; }
@@ -95,7 +87,7 @@ body {
         transform: rotate(79deg); }
     .container .developer__stones--soul .soul__stone img {
       width: 8rem;
-      animation: spin-stone 3s infinite;
+      animation: spin-stone 3s infinite linear;
       position: relative;
       left: 12rem;
       top: 30rem; }
