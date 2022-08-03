@@ -77,7 +77,7 @@ body {
         top: 4rem; }
         .container .developer__stones--reality .reality__stone img:hover {
           box-shadow: 0 0 3.6rem crimson;
-          border: 1px solid white;
+          border: 2px solid crimson;
           border-radius: 16px;
           animation: none; }
       .container .developer__stones--reality .reality__title {
@@ -101,7 +101,7 @@ body {
         top: 32rem; }
         .container .developer__stones--soul .soul__stone img:hover {
           box-shadow: 0 0 3.6rem orange;
-          border: 1px solid white;
+          border: 2px solid orange;
           border-radius: 16px;
           animation: none; }
       .container .developer__stones--soul .soul__title {
@@ -125,7 +125,7 @@ body {
         top: -10rem; }
         .container .developer__stones--power .power__stone img:hover {
           box-shadow: 0 0 3.6rem purple;
-          border: 1px solid white;
+          border: 2px solid purple;
           border-radius: 16px;
           animation: none; }
       .container .developer__stones--power .power__title {
@@ -149,7 +149,7 @@ body {
         top: 14rem; }
         .container .developer__stones--mind .mind__stone img:hover {
           box-shadow: 0 0 3.6rem yellow;
-          border: 1px solid white;
+          border: 2px solid yellow;
           border-radius: 16px;
           animation: none; }
       .container .developer__stones--mind .mind__title {
@@ -168,7 +168,7 @@ body {
         left: 30rem; }
         .container .developer__stones--time .time__stone img:hover {
           box-shadow: 0 0 3.6rem green;
-          border: 1px solid white;
+          border: 2px solid green;
           border-radius: 16px;
           animation: none; }
       .container .developer__stones--time .time__title {
@@ -187,7 +187,7 @@ body {
         left: 33rem; }
         .container .developer__stones--space .space__stone img:hover {
           box-shadow: 0 0 3.6rem blue;
-          border: 1px solid white;
+          border: 2px solid blue;
           border-radius: 16px;
           animation: none; }
       .container .developer__stones--space .space__title {
