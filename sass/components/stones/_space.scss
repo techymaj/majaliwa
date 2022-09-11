@@ -1,42 +1,60 @@
 .developer {
+  &__stones {
+    &--space {
+      position: absolute;
 
-    &__stones {
-        
-      &--space {
-        position: absolute;
+      .space {
+        position: relative;
 
-        .space {
-          &__stone img {
+        &__stone {
+          display: grid;
+          grid-template-columns: repeat(2, max-content);
+          align-items: center;
+
+          img {
+            &:hover + .space__title {
+              position: absolute;
+              top: 2.5rem;
+              right: 0;
+              left: 42rem;
+              width: max-content;
+              visibility: visible;
+              opacity: 1;
+            }
             width: 6rem;
             animation: spin-stone 3s infinite linear;
             position: relative;
-            right: 0;
             top: 0;
+            right: 0;
             left: 33rem;
+            z-index: 2;
 
             &:hover {
-                box-shadow: 0 0 3.6rem blue;
-                border: 2px solid blue;
-                border-radius: 16px;
-                animation: none;
-              }
+              box-shadow: 0 0 3.6rem blue;
+              border: 2px solid blue;
+              border-radius: 16px;
+              animation: none;
+            }
           }
+        }
 
-          &__title {
-            color: blue;
-            visibility: hidden;
-          }
+        &__title {
+          font-family: $developer-font;
+          color: blue;
+          visibility: hidden;
+          transition: all 0.3s linear;
+          position: absolute;
+          top: 2.5rem;
+          left: 40rem;
+          width: max-content;
+          z-index: -1;
+          opacity: 0;
+        }
 
-          &__tether {
-            display: none;
-            // position: relative;
-            // top: 15.5rem;
-            // left: 10rem;
-            // width: 10rem;
-            // border-bottom: 1px dashed blue;
-            // transform: rotate(79deg);
-          }
+        &__tether {
+          display: none;
         }
       }
     }
+  }
 }

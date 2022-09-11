@@ -1,71 +1,62 @@
 .developer {
+  &__stones {
+    &--reality {
+      position: absolute;
+      top: -20rem;
 
-    &__stones {
+      .reality {
+        position: relative;
 
-        &--reality {
+        &__stone {
+          &:hover + .reality__title {
             position: absolute;
-            top: -20rem;
-    
-            .reality {
-              position: relative;
-    
-              
-    
-              &__stone {
-    
-                &:hover + .reality__title {
-    
-                  position: absolute;
-                    top: 6.5rem;
-                    left: 17rem;
-                    width: max-content;
-                    visibility: visible;
-                    opacity: 1;
-                  }
-    
-                  img {
-                    width: 6rem;
-                    animation: spin-stone 3s infinite linear;
-                    position: relative;
-                    left: 10rem;
-                    top: 4rem;
-                    z-index: 2;
-                    
-                    &:hover {
-                      box-shadow: 0 0 3.6rem crimson;
-                      border: 2px solid crimson;
-                      border-radius: 16px;
-                      animation: none;
-                    }
-                    
-                    
-                  }
-                }
-                
-                &__title {
-                  font-family: $developer-font;
-                  color: crimson;
-                  visibility: hidden;
-                  transition: all .3s linear; 
-                  position: absolute;
-                  top: 6.5rem;
-                  left: 5rem;
-                  width: max-content;
-                  z-index: -1;
-                  opacity: 0;
-                
-              }
-    
-              &__tether {
-                display: none;
-                position: relative;
-                top: 3rem;
-                left: 3rem;
-                width: 10rem;
-                border-bottom: 1px dashed crimson;
-                transform: rotate(79deg);
-              }
+            top: 6.5rem;
+            left: 18rem;
+            width: max-content;
+            visibility: visible;
+            opacity: 1;
+          }
+
+          img {
+            width: 6rem;
+            animation: spin-stone 3s infinite linear;
+            position: relative;
+            left: 10rem;
+            top: 4rem;
+            z-index: 2;
+
+            &:hover {
+              box-shadow: 0 0 3.6rem crimson;
+              border: 2px solid crimson;
+              border-radius: 16px;
+              animation: none;
             }
           }
+        }
+
+        &__title {
+          font-family: $developer-font;
+          color: crimson;
+          visibility: hidden;
+          transition: all 0.3s linear;
+          position: absolute;
+          top: 6.5rem;
+          left: 15rem;
+          width: max-content;
+          z-index: -1;
+          opacity: 0;
+        }
+
+        &__tether {
+          display: none;
+          position: relative;
+          top: 3rem;
+          left: 3rem;
+          width: 10rem;
+          border-bottom: 1px dashed crimson;
+          transform: rotate(79deg);
+        }
+      }
     }
+  }
 }

@@ -122,7 +122,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     .developer__stones--reality .reality__stone:hover + .reality__title {
       position: absolute;
       top: 6.5rem;
-      left: 17rem;
+      left: 18rem;
       width: max-content;
       visibility: visible;
       opacity: 1; }
@@ -142,10 +142,10 @@ ORDER: Base + Typography > general layout + grid > page layout > components
       font-family: "Major Mono Display", monospace;
       color: crimson;
       visibility: hidden;
-      transition: all .3s linear;
+      transition: all 0.3s linear;
       position: absolute;
       top: 6.5rem;
-      left: 5rem;
+      left: 15rem;
       width: max-content;
       z-index: -1;
       opacity: 0; }
@@ -249,20 +249,43 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 
 .developer__stones--space {
   position: absolute; }
-  .developer__stones--space .space__stone img {
-    width: 6rem;
-    animation: spin-stone 3s infinite linear;
-    position: relative;
-    right: 0;
-    top: 0;
-    left: 33rem; }
-    .developer__stones--space .space__stone img:hover {
-      box-shadow: 0 0 3.6rem blue;
-      border: 2px solid blue;
-      border-radius: 16px;
-      animation: none; }
-  .developer__stones--space .space__title {
-    color: blue;
-    visibility: hidden; }
-  .developer__stones--space .space__tether {
-    display: none; }
+  .developer__stones--space .space {
+    position: relative; }
+    .developer__stones--space .space__stone {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      align-items: center; }
+      .developer__stones--space .space__stone img {
+        width: 6rem;
+        animation: spin-stone 3s infinite linear;
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 33rem;
+        z-index: 2; }
+        .developer__stones--space .space__stone img:hover + .space__title {
+          position: absolute;
+          top: 2.5rem;
+          right: 0;
+          left: 42rem;
+          width: max-content;
+          visibility: visible;
+          opacity: 1; }
+        .developer__stones--space .space__stone img:hover {
+          box-shadow: 0 0 3.6rem blue;
+          border: 2px solid blue;
+          border-radius: 16px;
+          animation: none; }
+    .developer__stones--space .space__title {
+      font-family: "Major Mono Display", monospace;
+      color: blue;
+      visibility: hidden;
+      transition: all 0.3s linear;
+      position: absolute;
+      top: 2.5rem;
+      left: 40rem;
+      width: max-content;
+      z-index: -1;
+      opacity: 0; }
+    .developer__stones--space .space__tether {
+      display: none; }
