@@ -166,14 +166,29 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     position: relative;
     left: 6rem;
     top: 32rem; }
+    .developer__stones--soul .soul__stone img:hover + .soul__title {
+      position: absolute;
+      top: 34.5rem;
+      left: -8rem;
+      width: max-content;
+      visibility: visible;
+      opacity: 1; }
     .developer__stones--soul .soul__stone img:hover {
       box-shadow: 0 0 3.6rem orange;
       border: 2px solid orange;
       border-radius: 16px;
       animation: none; }
   .developer__stones--soul .soul__title {
+    font-family: "Major Mono Display", monospace;
     color: orange;
-    visibility: hidden; }
+    visibility: hidden;
+    transition: all 0.3s linear;
+    position: absolute;
+    top: 34.5rem;
+    left: -3rem;
+    width: max-content;
+    z-index: -1;
+    opacity: 0; }
   .developer__stones--soul .soul__tether {
     display: none;
     position: relative;
