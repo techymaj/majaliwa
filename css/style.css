@@ -47,10 +47,11 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 */
 .container {
   display: grid;
+  grid-template-columns: max-content;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw; }
+  align-content: center;
+  height: 95vh; }
   .container #background-video {
     width: 100vw;
     height: 100vh;
