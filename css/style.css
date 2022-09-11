@@ -86,6 +86,8 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     width: 20rem;
     border-radius: 50%;
     border: 2px dashed wheat; }
+    .container .developer__stones a {
+      text-decoration: none; }
   .container .developer__excerpt {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
