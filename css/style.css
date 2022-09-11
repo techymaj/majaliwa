@@ -241,14 +241,29 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     position: relative;
     right: 16rem;
     top: -10rem; }
+    .developer__stones--power .power__stone img:hover + .power__title {
+      position: absolute;
+      top: -7.5rem;
+      left: -32rem;
+      width: max-content;
+      visibility: visible;
+      opacity: 1; }
     .developer__stones--power .power__stone img:hover {
       box-shadow: 0 0 3.6rem purple;
       border: 2px solid purple;
       border-radius: 16px;
       animation: none; }
   .developer__stones--power .power__title {
+    font-family: "Major Mono Display", monospace;
     color: purple;
-    visibility: hidden; }
+    visibility: hidden;
+    transition: all 0.3s linear;
+    position: absolute;
+    top: -7.5rem;
+    left: -27rem;
+    width: max-content;
+    z-index: -1;
+    opacity: 0; }
   .developer__stones--power .power__tether {
     display: none;
     position: relative;
