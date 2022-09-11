@@ -1,0 +1,42 @@
+.developer {
+
+    &__stones {
+
+        
+      &--power {
+        position: absolute;
+
+        .power {
+          &__stone img {
+            width: 6rem;
+            animation: spin-stone 3s infinite linear;
+            position: relative;
+            right: 16rem;
+            top: -10rem;
+
+            &:hover {
+                box-shadow: 0 0 3.6rem purple;
+                border: 2px solid purple;
+                border-radius: 16px;
+                animation: none;
+              }
+          }
+
+          &__title {
+            color: purple;
+            visibility: hidden;
+          }
+
+          &__tether {
+            display: none;
+            position: relative;
+            top: 15.5rem;
+            left: 10rem;
+            width: 10rem;
+            border-bottom: 1px dashed purple;
+            transform: rotate(79deg);
+          }
+        }
+      }
+    }
+}

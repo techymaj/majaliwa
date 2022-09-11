@@ -1,6 +1,14 @@
 @import "base/base";
 @import "base/animations";    
+@import "abstracts/mixins";
 
 @import 'base/typography';       
 @import "pages/home.scss";      
+
+@import 'components/stones/reality';
+@import 'components/stones/soul';
+@import 'components/stones/time';
+@import 'components/stones/power'; 
+@import 'components/stones/mind';
+@import 'components/stones/space'; 
  

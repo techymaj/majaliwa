@@ -13,6 +13,30 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin developerStones {
+    position: relative;
+      height: 20rem;
+      width: 20rem;
+      border-radius: 50%;
+      border: 2px dashed wheat;
+}
+
+@mixin developer {
+    &__image {
+        height: 20rem;
+        width: 20rem;
+        border-radius: 50%;
+        background-image: url(../assets/img/me.jpg);
+        background-color: #cccccc;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+  
+        &:hover > * {
+          animation: none;
+        }
+      }
+}
 
 /*
 MEDIA QUERY MANAGER

@@ -1,0 +1,41 @@
+.developer {
+
+    &__stones {
+        
+      &--mind {
+        position: absolute;
+
+        .mind {
+          &__stone img {
+            width: 6rem;
+            animation: spin-stone 3s infinite linear;
+            position: relative;
+            right: 18rem;
+            top: 14rem;
+
+            &:hover {
+                box-shadow: 0 0 3.6rem yellow;
+                border: 2px solid yellow;
+                border-radius: 16px;
+                animation: none;
+              }
+          }
+
+          &__title {
+            color: yellow;
+            visibility: hidden;
+          }
+
+          &__tether {
+            display: none;
+            // position: relative;
+            // top: 15.5rem;
+            // left: 10rem;
+            // width: 10rem;
+            // border-bottom: 1px dashed yellow;
+            // transform: rotate(79deg);
+          }
+        }
+      }
+    }
+}

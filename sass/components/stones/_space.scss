@@ -1,0 +1,42 @@
+.developer {
+
+    &__stones {
+        
+      &--space {
+        position: absolute;
+
+        .space {
+          &__stone img {
+            width: 6rem;
+            animation: spin-stone 3s infinite linear;
+            position: relative;
+            right: 0;
+            top: 0;
+            left: 33rem;
+
+            &:hover {
+                box-shadow: 0 0 3.6rem blue;
+                border: 2px solid blue;
+                border-radius: 16px;
+                animation: none;
+              }
+          }
+
+          &__title {
+            color: blue;
+            visibility: hidden;
+          }
+
+          &__tether {
+            display: none;
+            // position: relative;
+            // top: 15.5rem;
+            // left: 10rem;
+            // width: 10rem;
+            // border-bottom: 1px dashed blue;
+            // transform: rotate(79deg);
+          }
+        }
+      }
+    }
+}

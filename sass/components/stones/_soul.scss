@@ -1,0 +1,40 @@
+.developer {
+
+    &__stones {
+        &--soul {
+            position: absolute;
+    
+            .soul {
+              &__stone img {
+                width: 5.5rem;
+                animation: spin-stone 3s infinite linear;
+                position: relative;
+                left: 6rem;
+                top: 32rem;
+    
+                &:hover {
+                    box-shadow: 0 0 3.6rem orange;
+                    border: 2px solid orange;
+                    border-radius: 16px;
+                    animation: none;
+                  }
+              }
+    
+              &__title {
+                color: orange;
+                visibility: hidden;
+              }
+    
+              &__tether {
+                display: none;
+                position: relative;
+                top: 15.5rem;
+                left: 10rem;
+                width: 10rem;
+                border-bottom: 1px dashed orange;
+                transform: rotate(79deg);
+              }
+            }
+          }
+    }
+}

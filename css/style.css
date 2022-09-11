@@ -26,6 +26,25 @@ body {
   to {
     transform: rotate(359deg); } }
 
+/*
+MEDIA QUERY MANAGER
+
+0 - 600px:      phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800px] is where our normal styles apply
+1800+px:        Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + Typography > general layout + grid > page layout > components
+
+1em = 16px 
+*/
 .container {
   display: grid;
   justify-content: center;
@@ -66,153 +85,6 @@ body {
     width: 20rem;
     border-radius: 50%;
     border: 2px dashed wheat; }
-    .container .developer__stones--reality {
-      position: absolute;
-      top: -20rem; }
-      .container .developer__stones--reality .reality {
-        position: relative; }
-        .container .developer__stones--reality .reality__stone:hover + .reality__title {
-          position: absolute;
-          top: 6.5rem;
-          left: 17rem;
-          width: max-content;
-          visibility: visible;
-          opacity: 1; }
-        .container .developer__stones--reality .reality__stone img {
-          width: 6rem;
-          animation: spin-stone 3s infinite linear;
-          position: relative;
-          left: 10rem;
-          top: 4rem;
-          z-index: 2; }
-          .container .developer__stones--reality .reality__stone img:hover {
-            box-shadow: 0 0 3.6rem crimson;
-            border: 2px solid crimson;
-            border-radius: 16px;
-            animation: none; }
-        .container .developer__stones--reality .reality__title {
-          font-family: "Major Mono Display", monospace;
-          color: crimson;
-          visibility: hidden;
-          transition: all .3s linear;
-          position: absolute;
-          top: 6.5rem;
-          left: 5rem;
-          width: max-content;
-          z-index: -1;
-          opacity: 0; }
-        .container .developer__stones--reality .reality__tether {
-          display: none;
-          position: relative;
-          top: 3rem;
-          left: 3rem;
-          width: 10rem;
-          border-bottom: 1px dashed crimson;
-          transform: rotate(79deg); }
-    .container .developer__stones--soul {
-      position: absolute; }
-      .container .developer__stones--soul .soul__stone img {
-        width: 5.5rem;
-        animation: spin-stone 3s infinite linear;
-        position: relative;
-        left: 6rem;
-        top: 32rem; }
-        .container .developer__stones--soul .soul__stone img:hover {
-          box-shadow: 0 0 3.6rem orange;
-          border: 2px solid orange;
-          border-radius: 16px;
-          animation: none; }
-      .container .developer__stones--soul .soul__title {
-        color: orange;
-        visibility: hidden; }
-      .container .developer__stones--soul .soul__tether {
-        display: none;
-        position: relative;
-        top: 15.5rem;
-        left: 10rem;
-        width: 10rem;
-        border-bottom: 1px dashed orange;
-        transform: rotate(79deg); }
-    .container .developer__stones--power {
-      position: absolute; }
-      .container .developer__stones--power .power__stone img {
-        width: 6rem;
-        animation: spin-stone 3s infinite linear;
-        position: relative;
-        right: 16rem;
-        top: -10rem; }
-        .container .developer__stones--power .power__stone img:hover {
-          box-shadow: 0 0 3.6rem purple;
-          border: 2px solid purple;
-          border-radius: 16px;
-          animation: none; }
-      .container .developer__stones--power .power__title {
-        color: purple;
-        visibility: hidden; }
-      .container .developer__stones--power .power__tether {
-        display: none;
-        position: relative;
-        top: 15.5rem;
-        left: 10rem;
-        width: 10rem;
-        border-bottom: 1px dashed purple;
-        transform: rotate(79deg); }
-    .container .developer__stones--mind {
-      position: absolute; }
-      .container .developer__stones--mind .mind__stone img {
-        width: 6rem;
-        animation: spin-stone 3s infinite linear;
-        position: relative;
-        right: 18rem;
-        top: 14rem; }
-        .container .developer__stones--mind .mind__stone img:hover {
-          box-shadow: 0 0 3.6rem yellow;
-          border: 2px solid yellow;
-          border-radius: 16px;
-          animation: none; }
-      .container .developer__stones--mind .mind__title {
-        color: yellow;
-        visibility: hidden; }
-      .container .developer__stones--mind .mind__tether {
-        display: none; }
-    .container .developer__stones--time {
-      position: absolute; }
-      .container .developer__stones--time .time__stone img {
-        width: 7rem;
-        animation: spin-stone 3s infinite linear;
-        position: relative;
-        right: 0;
-        top: 22rem;
-        left: 30rem; }
-        .container .developer__stones--time .time__stone img:hover {
-          box-shadow: 0 0 3.6rem green;
-          border: 2px solid green;
-          border-radius: 16px;
-          animation: none; }
-      .container .developer__stones--time .time__title {
-        color: green;
-        visibility: hidden; }
-      .container .developer__stones--time .time__tether {
-        display: none; }
-    .container .developer__stones--space {
-      position: absolute; }
-      .container .developer__stones--space .space__stone img {
-        width: 6rem;
-        animation: spin-stone 3s infinite linear;
-        position: relative;
-        right: 0;
-        top: 0;
-        left: 33rem; }
-        .container .developer__stones--space .space__stone img:hover {
-          box-shadow: 0 0 3.6rem blue;
-          border: 2px solid blue;
-          border-radius: 16px;
-          animation: none; }
-      .container .developer__stones--space .space__title {
-        color: blue;
-        visibility: hidden; }
-      .container .developer__stones--space .space__tether {
-        display: none; }
   .container .developer__excerpt {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -241,3 +113,156 @@ body {
       width: 2rem; }
       .container .developer .socials .social-icon:hover {
         animation: none; }
+
+.developer__stones--reality {
+  position: absolute;
+  top: -20rem; }
+  .developer__stones--reality .reality {
+    position: relative; }
+    .developer__stones--reality .reality__stone:hover + .reality__title {
+      position: absolute;
+      top: 6.5rem;
+      left: 17rem;
+      width: max-content;
+      visibility: visible;
+      opacity: 1; }
+    .developer__stones--reality .reality__stone img {
+      width: 6rem;
+      animation: spin-stone 3s infinite linear;
+      position: relative;
+      left: 10rem;
+      top: 4rem;
+      z-index: 2; }
+      .developer__stones--reality .reality__stone img:hover {
+        box-shadow: 0 0 3.6rem crimson;
+        border: 2px solid crimson;
+        border-radius: 16px;
+        animation: none; }
+    .developer__stones--reality .reality__title {
+      font-family: "Major Mono Display", monospace;
+      color: crimson;
+      visibility: hidden;
+      transition: all .3s linear;
+      position: absolute;
+      top: 6.5rem;
+      left: 5rem;
+      width: max-content;
+      z-index: -1;
+      opacity: 0; }
+    .developer__stones--reality .reality__tether {
+      display: none;
+      position: relative;
+      top: 3rem;
+      left: 3rem;
+      width: 10rem;
+      border-bottom: 1px dashed crimson;
+      transform: rotate(79deg); }
+
+.developer__stones--soul {
+  position: absolute; }
+  .developer__stones--soul .soul__stone img {
+    width: 5.5rem;
+    animation: spin-stone 3s infinite linear;
+    position: relative;
+    left: 6rem;
+    top: 32rem; }
+    .developer__stones--soul .soul__stone img:hover {
+      box-shadow: 0 0 3.6rem orange;
+      border: 2px solid orange;
+      border-radius: 16px;
+      animation: none; }
+  .developer__stones--soul .soul__title {
+    color: orange;
+    visibility: hidden; }
+  .developer__stones--soul .soul__tether {
+    display: none;
+    position: relative;
+    top: 15.5rem;
+    left: 10rem;
+    width: 10rem;
+    border-bottom: 1px dashed orange;
+    transform: rotate(79deg); }
+
+.developer__stones--time {
+  position: absolute; }
+  .developer__stones--time .time__stone img {
+    width: 7rem;
+    animation: spin-stone 3s infinite linear;
+    position: relative;
+    right: 0;
+    top: 22rem;
+    left: 30rem; }
+    .developer__stones--time .time__stone img:hover {
+      box-shadow: 0 0 3.6rem green;
+      border: 2px solid green;
+      border-radius: 16px;
+      animation: none; }
+  .developer__stones--time .time__title {
+    color: green;
+    visibility: hidden; }
+  .developer__stones--time .time__tether {
+    display: none; }
+
+.developer__stones--power {
+  position: absolute; }
+  .developer__stones--power .power__stone img {
+    width: 6rem;
+    animation: spin-stone 3s infinite linear;
+    position: relative;
+    right: 16rem;
+    top: -10rem; }
+    .developer__stones--power .power__stone img:hover {
+      box-shadow: 0 0 3.6rem purple;
+      border: 2px solid purple;
+      border-radius: 16px;
+      animation: none; }
+  .developer__stones--power .power__title {
+    color: purple;
+    visibility: hidden; }
+  .developer__stones--power .power__tether {
+    display: none;
+    position: relative;
+    top: 15.5rem;
+    left: 10rem;
+    width: 10rem;
+    border-bottom: 1px dashed purple;
+    transform: rotate(79deg); }
+
+.developer__stones--mind {
+  position: absolute; }
+  .developer__stones--mind .mind__stone img {
+    width: 6rem;
+    animation: spin-stone 3s infinite linear;
+    position: relative;
+    right: 18rem;
+    top: 14rem; }
+    .developer__stones--mind .mind__stone img:hover {
+      box-shadow: 0 0 3.6rem yellow;
+      border: 2px solid yellow;
+      border-radius: 16px;
+      animation: none; }
+  .developer__stones--mind .mind__title {
+    color: yellow;
+    visibility: hidden; }
+  .developer__stones--mind .mind__tether {
+    display: none; }
+
+.developer__stones--space {
+  position: absolute; }
+  .developer__stones--space .space__stone img {
+    width: 6rem;
+    animation: spin-stone 3s infinite linear;
+    position: relative;
+    right: 0;
+    top: 0;
+    left: 33rem; }
+    .developer__stones--space .space__stone img:hover {
+      box-shadow: 0 0 3.6rem blue;
+      border: 2px solid blue;
+      border-radius: 16px;
+      animation: none; }
+  .developer__stones--space .space__title {
+    color: blue;
+    visibility: hidden; }
+  .developer__stones--space .space__tether {
+    display: none; }
