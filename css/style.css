@@ -266,14 +266,29 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     position: relative;
     right: 18rem;
     top: 14rem; }
+    .developer__stones--mind .mind__stone img:hover + .mind__title {
+      position: absolute;
+      top: 16.5rem;
+      left: -32rem;
+      width: max-content;
+      visibility: visible;
+      opacity: 1; }
     .developer__stones--mind .mind__stone img:hover {
       box-shadow: 0 0 3.6rem yellow;
       border: 2px solid yellow;
       border-radius: 16px;
       animation: none; }
   .developer__stones--mind .mind__title {
+    font-family: "Major Mono Display", monospace;
     color: yellow;
-    visibility: hidden; }
+    visibility: hidden;
+    transition: all 0.3s linear;
+    position: absolute;
+    top: 16.5rem;
+    left: -27rem;
+    width: max-content;
+    z-index: -1;
+    opacity: 0; }
   .developer__stones--mind .mind__tether {
     display: none; }
 

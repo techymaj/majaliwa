@@ -1,12 +1,19 @@
 .developer {
+  &__stones {
+    &--mind {
+      position: absolute;
 
-    &__stones {
-        
-      &--mind {
-        position: absolute;
-
-        .mind {
-          &__stone img {
+      .mind {
+        &__stone {
+          img {
+            &:hover + .mind__title {
+              position: absolute;
+              top: 16.5rem;
+              left: -32rem;
+              width: max-content;
+              visibility: visible;
+              opacity: 1;
+            }
             width: 6rem;
             animation: spin-stone 3s infinite linear;
             position: relative;
@@ -14,28 +21,37 @@
             top: 14rem;
 
             &:hover {
-                box-shadow: 0 0 3.6rem yellow;
-                border: 2px solid yellow;
-                border-radius: 16px;
-                animation: none;
-              }
+              box-shadow: 0 0 3.6rem yellow;
+              border: 2px solid yellow;
+              border-radius: 16px;
+              animation: none;
+            }
           }
+        }
 
-          &__title {
-            color: yellow;
-            visibility: hidden;
-          }
+        &__title {
+          font-family: $developer-font;
+          color: yellow;
+          visibility: hidden;
+          transition: all 0.3s linear;
+          position: absolute;
+          top: 16.5rem;
+          left: -27rem;
+          width: max-content;
+          z-index: -1;
+          opacity: 0;
+        }
 
-          &__tether {
-            display: none;
-            // position: relative;
-            // top: 15.5rem;
-            // left: 10rem;
-            // width: 10rem;
-            // border-bottom: 1px dashed yellow;
-            // transform: rotate(79deg);
-          }
+        &__tether {
+          display: none;
+          // position: relative;
+          // top: 15.5rem;
+          // left: 10rem;
+          // width: 10rem;
+          // border-bottom: 1px dashed yellow;
+          // transform: rotate(79deg);
         }
       }
     }
+  }
 }
