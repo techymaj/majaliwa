@@ -1,41 +1,52 @@
 .developer {
+  &__stones {
+    &--time {
+      position: absolute;
 
-    &__stones {
-        &--time {
-            position: absolute;
-    
-            .time {
-              &__stone img {
-                width: 7rem;
-                animation: spin-stone 3s infinite linear;
-                position: relative;
-                right: 0;
-                top: 22rem;
-                left: 30rem;
-    
-                &:hover {
-                    box-shadow: 0 0 3.6rem green;
-                    border: 2px solid green;
-                    border-radius: 16px;
-                    animation: none;
-                  }
-              }
-    
-              &__title {
-                color: green;
-                visibility: hidden;
-              }
-    
-              &__tether {
-                display: none;
-                // position: relative;
-                // top: 15.5rem;
-                // left: 10rem;
-                // width: 10rem;
-                // border-bottom: 1px dashed green;
-                // transform: rotate(79deg);
-              }
+      .time {
+        &__stone {
+          img {
+            &:hover + .time__title {
+              position: absolute;
+              top: 24rem;
+              left: 40rem;
+              width: max-content;
+              visibility: visible;
+              opacity: 1;
+            }
+            width: 7rem;
+            animation: spin-stone 3s infinite linear;
+            position: relative;
+            right: 0;
+            top: 22rem;
+            left: 30rem;
+
+            &:hover {
+              box-shadow: 0 0 3.6rem green;
+              border: 2px solid green;
+              border-radius: 16px;
+              animation: none;
             }
           }
+        }
+
+        &__title {
+          font-family: $developer-font;
+          color: green;
+          visibility: hidden;
+          transition: all 0.3s linear;
+          position: absolute;
+          top: 24rem;
+          left: 37rem;
+          width: max-content;
+          z-index: -1;
+          opacity: 0;
+        }
+
+        &__tether {
+          display: none;
+        }
+      }
     }
+  }
 }
