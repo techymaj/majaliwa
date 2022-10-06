@@ -7,6 +7,16 @@
 
 html {
   font-size: 62.5%; }
+  @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      transform: rotate(90deg);
+      transform-origin: right top;
+      width: 100vh;
+      height: 100vw;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      right: 0; } }
 
 body {
   box-sizing: border-box;
@@ -63,12 +73,10 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     bottom: 0;
     z-index: -1; }
     @media (max-width: 750px) {
-      .container #background-video {
-        display: none; }
-        .container #background-video body {
-          background: url(./assets/img/home.png) no-repeat;
-          background-size: cover;
-          background-color: transparent; } }
+      .container #background-video body {
+        background: url(./assets/img/home.png) no-repeat;
+        background-size: cover;
+        background-color: transparent; } }
   .container .developer__image {
     height: 20rem;
     width: 20rem;
@@ -90,7 +98,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
       text-decoration: none; }
   .container .developer__excerpt {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, max-content);
     width: 21rem;
     color: wheat; }
     .container .developer__excerpt .name {
