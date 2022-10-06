@@ -42,7 +42,7 @@
 
     &__excerpt {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, max-content);
       width: 21rem;
       color: wheat;
       // text-align: center;
