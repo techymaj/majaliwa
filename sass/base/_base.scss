@@ -12,16 +12,16 @@ html {
     // This defines what 1rem is
     font-size: 62.5%; // 1rem = 10px, 10/16 = 62.5%;
 
-    @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-        transform: rotate(90deg);
-        transform-origin: right top;
-        width: 100vh;
-        height: 100vw;
-        overflow-x: hidden;
-        position: absolute;
-        top: 100%;
-        right: 0;
-    }
+    // @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    //     transform: rotate(90deg);
+    //     transform-origin: right top;
+    //     width: 100vh;
+    //     height: 100vw;
+    //     overflow-x: hidden;
+    //     position: absolute;
+    //     top: 100%;
+    //     right: 0;
+    // }
 }
 
 body {

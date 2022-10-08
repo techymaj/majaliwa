@@ -5,7 +5,10 @@
   align-items: center;
   align-content: center;
   height: 95vh;
-  // width: 100vw;
+
+  @media only screen and (max-width: 48em) {
+    height: 60vh;
+  }
 
   #background-video {
     width: 100vw;
@@ -34,6 +37,18 @@
 
     &__stones {
       @include developerStones;
+
+      @media only screen and (max-width: 48em) {
+
+        .soul,
+        .time,
+        .mind,
+        .reality,
+        .power,
+        .space {
+          display: none;
+        }
+      }
 
       a {
         text-decoration: none;
@@ -76,10 +91,72 @@
         fill: wheat;
         height: 2rem;
         width: 2rem;
+
         &:hover {
           animation: none;
         }
       }
+    }
+  }
+}
+
+.mobile-stones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  justify-items: center;
+
+  .m {
+
+    &-soul {
+      color: orange;
+    }
+    &-space {
+      color: blue;
+    }
+    &-power {
+      color: purple;
+    }
+    &-reality {
+      color: crimson;
+    }
+    &-mind {
+      color: yellow;
+    }
+    &-time {
+      color: green;
+    }
+  }
+
+  .ms {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 1.2rem;
+      font-family: $developer-font;
+      color: currentColor;
+      padding-left: 1rem;
+      cursor: pointer;
+
+      a {
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+          text-decoration: none;
+          color: currentColor !important;
+        }
+      }
+    }
+  }
+
+  img {
+    width: 6rem;
+    animation: spin-stone 3s infinite linear;
+
+    @media only screen and (min-width: 47.9375em) {
+
+      display: none;
     }
   }
 }

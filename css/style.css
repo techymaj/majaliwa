@@ -7,16 +7,6 @@
 
 html {
   font-size: 62.5%; }
-  @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-    html {
-      transform: rotate(90deg);
-      transform-origin: right top;
-      width: 100vh;
-      height: 100vw;
-      overflow-x: hidden;
-      position: absolute;
-      top: 100%;
-      right: 0; } }
 
 body {
   box-sizing: border-box;
@@ -62,6 +52,9 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   align-items: center;
   align-content: center;
   height: 95vh; }
+  @media only screen and (max-width: 48em) {
+    .container {
+      height: 60vh; } }
   .container #background-video {
     width: 100vw;
     height: 100vh;
@@ -94,6 +87,14 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     width: 20rem;
     border-radius: 50%;
     border: 2px dashed wheat; }
+    @media only screen and (max-width: 48em) {
+      .container .developer__stones .soul,
+      .container .developer__stones .time,
+      .container .developer__stones .mind,
+      .container .developer__stones .reality,
+      .container .developer__stones .power,
+      .container .developer__stones .space {
+        display: none; } }
     .container .developer__stones a {
       text-decoration: none; }
   .container .developer__excerpt {
@@ -124,6 +125,41 @@ ORDER: Base + Typography > general layout + grid > page layout > components
       width: 2rem; }
       .container .developer .socials .social-icon:hover {
         animation: none; }
+
+.mobile-stones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  justify-items: center; }
+  .mobile-stones .m-soul {
+    color: orange; }
+  .mobile-stones .m-space {
+    color: blue; }
+  .mobile-stones .m-power {
+    color: purple; }
+  .mobile-stones .m-reality {
+    color: crimson; }
+  .mobile-stones .m-mind {
+    color: yellow; }
+  .mobile-stones .m-time {
+    color: green; }
+  .mobile-stones .ms {
+    display: flex;
+    align-items: center; }
+    .mobile-stones .ms span {
+      font-size: 1.2rem;
+      font-family: "Major Mono Display", monospace;
+      color: currentColor;
+      padding-left: 1rem;
+      cursor: pointer; }
+      .mobile-stones .ms span a:link, .mobile-stones .ms span a:visited, .mobile-stones .ms span a:hover, .mobile-stones .ms span a:active {
+        text-decoration: none;
+        color: currentColor !important; }
+  .mobile-stones img {
+    width: 6rem;
+    animation: spin-stone 3s infinite linear; }
+    @media only screen and (min-width: 47.9375em) {
+      .mobile-stones img {
+        display: none; } }
 
 .developer__stones--reality {
   position: absolute;
