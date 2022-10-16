@@ -209,7 +209,8 @@ body {
     .reality__project-showcase .project__title {
       font-size: 5rem; }
     .reality__project-showcase .project__description {
-      font-size: 1.6rem; }
+      font-size: 1.6rem;
+      line-height: 2.5rem; }
     .reality__project-showcase .project__version {
       font-size: 1.2rem;
       font-weight: bold; }
