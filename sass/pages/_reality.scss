@@ -1,0 +1,100 @@
+body {
+    background-color: unset;
+    // background-image: url("../../assets/img/projects/artemisia-1.png");
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // background-size: 100%;
+    // background-attachment: fixed;
+}
+
+.reality {
+    display: grid;
+    grid-template-columns: minmax(14rem, 1fr) repeat(6, 1fr) minmax(14rem, 1fr);
+    grid-template-rows: 12rem repeat(8, 1fr);
+    height: 100vh;
+
+    .header-stone {
+        transform: rotate(72deg);
+    }
+
+
+    &__header {
+        grid-column: 2 / 8;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            font-weight: bold;
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+
+            span {
+                padding-left: 2rem;
+                color: crimson;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &__project-showcase {
+        text-align: center;
+        padding: 5rem;
+        grid-row: 2 / -1;
+        width: 50rem;
+        margin: 10rem auto auto;
+        grid-column: 1 / -1;
+
+        background-color: white;
+        box-shadow: 0 0 5px rgba($color: red, $alpha: 1.0); 
+
+        display: grid;
+        row-gap: 2rem;
+        border-radius: 1rem;
+        justify-items: center;
+
+        .project {
+
+            &__title {
+                font-size: 5rem;
+            }
+
+            &__description {
+                font-size: 1.6rem;
+            }
+
+            &__version {
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+            &__downloads {
+                font-size: 2rem;
+                font-weight: 300;
+            }
+
+            &__download {
+                &:link,
+                &:visited,
+                &:active {
+
+                    text-decoration: none;
+                }
+                font-size: 1.8rem;
+                background-color: rgba($color: crimson, $alpha: .65); 
+                padding: 1.2rem 2rem;
+                color: white;
+                border-radius: 2rem;
+                transition: background-color 300ms linear;
+                
+                &:hover {
+                    background-color: rgba($color: crimson, $alpha: 1.0); 
+                }
+            }
+        }
+    }
+}

@@ -10,7 +10,8 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: darkslategray; }
+  background-color: darkslategray;
+  font-family: "Major Mono Display", monospace; }
 
 @keyframes spin {
   0% {
@@ -45,6 +46,12 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 
 1em = 16px 
 */
+.mbuto {
+  font-family: "Major Mono Display", monospace; }
+
+.header-stone {
+  width: 6rem; }
+
 .container {
   display: grid;
   grid-template-columns: max-content;
@@ -100,6 +107,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   .container .developer__excerpt {
     display: grid;
     grid-template-columns: repeat(2, max-content);
+    justify-content: center;
     width: 21rem;
     color: wheat; }
     .container .developer__excerpt .name {
@@ -160,6 +168,65 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     @media only screen and (min-width: 47.9375em) {
       .mobile-stones img {
         display: none; } }
+
+body {
+  background-color: unset; }
+
+.reality {
+  display: grid;
+  grid-template-columns: minmax(14rem, 1fr) repeat(6, 1fr) minmax(14rem, 1fr);
+  grid-template-rows: 12rem repeat(8, 1fr);
+  height: 100vh; }
+  .reality .header-stone {
+    transform: rotate(72deg); }
+  .reality__header {
+    grid-column: 2 / 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .reality__header span {
+      font-weight: bold; }
+    .reality__header h1 {
+      display: flex;
+      align-items: center; }
+      .reality__header h1 span {
+        padding-left: 2rem;
+        color: crimson;
+        font-weight: 300; }
+  .reality__project-showcase {
+    text-align: center;
+    padding: 5rem;
+    grid-row: 2 / -1;
+    width: 50rem;
+    margin: 10rem auto auto;
+    grid-column: 1 / -1;
+    background-color: white;
+    box-shadow: 0 0 5px red;
+    display: grid;
+    row-gap: 2rem;
+    border-radius: 1rem;
+    justify-items: center; }
+    .reality__project-showcase .project__title {
+      font-size: 5rem; }
+    .reality__project-showcase .project__description {
+      font-size: 1.6rem; }
+    .reality__project-showcase .project__version {
+      font-size: 1.2rem;
+      font-weight: bold; }
+    .reality__project-showcase .project__downloads {
+      font-size: 2rem;
+      font-weight: 300; }
+    .reality__project-showcase .project__download {
+      font-size: 1.8rem;
+      background-color: rgba(220, 20, 60, 0.65);
+      padding: 1.2rem 2rem;
+      color: white;
+      border-radius: 2rem;
+      transition: background-color 300ms linear; }
+      .reality__project-showcase .project__download:link, .reality__project-showcase .project__download:visited, .reality__project-showcase .project__download:active {
+        text-decoration: none; }
+      .reality__project-showcase .project__download:hover {
+        background-color: crimson; }
 
 .developer__stones--reality {
   position: absolute;
