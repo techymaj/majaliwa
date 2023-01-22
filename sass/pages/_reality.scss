@@ -25,6 +25,11 @@ body {
         justify-content: space-between;
         align-items: center;
 
+        @media only screen and (max-width: 48em) {
+            grid-column: 1 / -1;
+            padding: 0 5rem;
+        }
+
         span {
             font-weight: bold;
         }
@@ -37,6 +42,10 @@ body {
                 padding-left: 2rem;
                 color: crimson;
                 font-weight: 300;
+
+                @media only screen and (max-width: 48em) {
+                    display: none;
+                }
             }
         }
     }
@@ -57,15 +66,32 @@ body {
         border-radius: 1rem;
         justify-items: center;
 
+        @media only screen and (max-width: 32.5em) {
+            width: 38rem;
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: 25em) {
+            width: 30rem;
+        }
+
         .project {
 
             &__title {
                 font-size: 5rem;
+
+                @media only screen and (max-width: 48em) {
+                    font-size: 3rem;
+                }
             }
 
             &__description {
                 font-size: 1.6rem;
                 line-height: 2.5rem;
+
+                @media only screen and (max-width: 48em) {
+                    font-size: 1.2rem;
+                }
             }
 
             &__version {

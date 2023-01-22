@@ -184,6 +184,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media only screen and (max-width: 48em) {
+      .reality__header {
+        grid-column: 1 / -1;
+        padding: 0 5rem; } }
     .reality__header span {
       font-weight: bold; }
     .reality__header h1 {
@@ -193,6 +197,9 @@ body {
         padding-left: 2rem;
         color: crimson;
         font-weight: 300; }
+        @media only screen and (max-width: 48em) {
+          .reality__header h1 span {
+            display: none; } }
   .reality__project-showcase {
     text-align: center;
     padding: 5rem;
@@ -206,11 +213,24 @@ body {
     row-gap: 2rem;
     border-radius: 1rem;
     justify-items: center; }
+    @media only screen and (max-width: 32.5em) {
+      .reality__project-showcase {
+        width: 38rem;
+        padding: 2rem; } }
+    @media only screen and (max-width: 25em) {
+      .reality__project-showcase {
+        width: 30rem; } }
     .reality__project-showcase .project__title {
       font-size: 5rem; }
+      @media only screen and (max-width: 48em) {
+        .reality__project-showcase .project__title {
+          font-size: 3rem; } }
     .reality__project-showcase .project__description {
       font-size: 1.6rem;
       line-height: 2.5rem; }
+      @media only screen and (max-width: 48em) {
+        .reality__project-showcase .project__description {
+          font-size: 1.2rem; } }
     .reality__project-showcase .project__version {
       font-size: 1.2rem;
       font-weight: bold; }
