@@ -86,6 +86,10 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
+    @media only screen and (max-width: 47.9375em) {
+      .container .developer__image {
+        height: 10rem;
+        width: 10rem; } }
     .container .developer__image:hover > * {
       animation: none; }
   .container .developer__stones {
@@ -94,6 +98,10 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     width: 20rem;
     border-radius: 50%;
     border: 2px dashed wheat; }
+    @media only screen and (max-width: 47.9375em) {
+      .container .developer__stones {
+        height: 10rem;
+        width: 10rem; } }
     @media only screen and (max-width: 47.9375em) {
       .container .developer__stones .soul,
       .container .developer__stones .time,
@@ -108,7 +116,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     display: grid;
     grid-template-columns: repeat(2, max-content);
     justify-content: center;
-    width: 21rem;
+    width: auto;
     color: wheat; }
     .container .developer__excerpt .name {
       grid-column: 1 / -1;
