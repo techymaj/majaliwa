@@ -122,6 +122,16 @@ body {
                     background-color: rgba($color: crimson, $alpha: 1.0); 
                 }
             }
+
+            &__google-play {
+                 
+                a {
+
+                    img {
+                        width: 50%;
+                    }
+                }
+            }
         }
     }
 }

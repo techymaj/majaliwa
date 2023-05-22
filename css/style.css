@@ -256,6 +256,8 @@ body {
         text-decoration: none; }
       .reality__project-showcase .project__download:hover {
         background-color: crimson; }
+    .reality__project-showcase .project__google-play a img {
+      width: 50%; }
 
 .developer__stones--reality {
   position: absolute;
