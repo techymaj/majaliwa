@@ -61,7 +61,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   height: 95vh; }
   @media only screen and (max-width: 48em) {
     .container {
-      height: 60vh; } }
+      height: 45vh; } }
   .container #background-video {
     width: 100vw;
     height: 100vh;
@@ -86,6 +86,10 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
+    @media only screen and (max-width: 47.9375em) {
+      .container .developer__image {
+        height: 10rem;
+        width: 10rem; } }
     .container .developer__image:hover > * {
       animation: none; }
   .container .developer__stones {
@@ -94,7 +98,11 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     width: 20rem;
     border-radius: 50%;
     border: 2px dashed wheat; }
-    @media only screen and (max-width: 48em) {
+    @media only screen and (max-width: 47.9375em) {
+      .container .developer__stones {
+        height: 10rem;
+        width: 10rem; } }
+    @media only screen and (max-width: 47.9375em) {
       .container .developer__stones .soul,
       .container .developer__stones .time,
       .container .developer__stones .mind,
@@ -108,7 +116,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     display: grid;
     grid-template-columns: repeat(2, max-content);
     justify-content: center;
-    width: 21rem;
+    width: auto;
     color: wheat; }
     .container .developer__excerpt .name {
       grid-column: 1 / -1;
@@ -165,7 +173,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   .mobile-stones img {
     width: 6rem;
     animation: spin-stone 3s infinite linear; }
-    @media only screen and (min-width: 47.9375em) {
+    @media only screen and (min-width: 48em) {
       .mobile-stones img {
         display: none; } }
 
@@ -184,6 +192,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media only screen and (max-width: 48em) {
+      .reality__header {
+        grid-column: 1 / -1;
+        padding: 0 5rem; } }
     .reality__header span {
       font-weight: bold; }
     .reality__header h1 {
@@ -193,6 +205,9 @@ body {
         padding-left: 2rem;
         color: crimson;
         font-weight: 300; }
+        @media only screen and (max-width: 48em) {
+          .reality__header h1 span {
+            display: none; } }
   .reality__project-showcase {
     text-align: center;
     padding: 5rem;
@@ -206,11 +221,24 @@ body {
     row-gap: 2rem;
     border-radius: 1rem;
     justify-items: center; }
+    @media only screen and (max-width: 32.5em) {
+      .reality__project-showcase {
+        width: 38rem;
+        padding: 2rem; } }
+    @media only screen and (max-width: 25em) {
+      .reality__project-showcase {
+        width: 30rem; } }
     .reality__project-showcase .project__title {
       font-size: 5rem; }
+      @media only screen and (max-width: 48em) {
+        .reality__project-showcase .project__title {
+          font-size: 3rem; } }
     .reality__project-showcase .project__description {
       font-size: 1.6rem;
       line-height: 2.5rem; }
+      @media only screen and (max-width: 48em) {
+        .reality__project-showcase .project__description {
+          font-size: 1.2rem; } }
     .reality__project-showcase .project__version {
       font-size: 1.2rem;
       font-weight: bold; }
@@ -228,6 +256,8 @@ body {
         text-decoration: none; }
       .reality__project-showcase .project__download:hover {
         background-color: crimson; }
+    .reality__project-showcase .project__google-play a img {
+      width: 50%; }
 
 .developer__stones--reality {
   position: absolute;
