@@ -276,6 +276,12 @@ body {
     text-align: center;
     font-size: 1.2rem;
     line-height: 1.8em; }
+    @media only screen and (max-width: 1024px) {
+      .space__page .desc {
+        padding: 1.2rem 8rem; } }
+    @media only screen and (max-width: 768px) {
+      .space__page .desc {
+        padding: 1.2rem 2rem; } }
   .space__page .pricing-plans {
     gap: 32px;
     display: flex;
@@ -284,6 +290,9 @@ body {
     justify-content: center;
     width: 100%;
     padding: 64px; }
+    @media only screen and (max-width: 768px) {
+      .space__page .pricing-plans {
+        padding: 0; } }
   .space__page .pricing-card {
     --col: #e4e4e7;
     position: relative;
@@ -334,6 +343,9 @@ body {
     font-size: 16px;
     font-weight: lighter;
     text-align: left; }
+    @media only screen and (max-width: 768px) {
+      .space__page .pricing-card .features li {
+        font-size: 12px; } }
   .space__page .pricing-card .features li i,
   .space__page .pricing-card .features li strong {
     color: #e4e4e7;

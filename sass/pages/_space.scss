@@ -17,6 +17,12 @@
       .desc {
         color: #ffffff;
         padding: 1.2rem 28rem;
+        @media only screen and (max-width: 1024px) {
+            padding: 1.2rem 8rem;
+        }
+        @media only screen and (max-width: 768px) {
+            padding: 1.2rem 2rem;
+        }
         text-align: center;
         font-size: 1.2rem;
         line-height: 1.8em;
@@ -30,6 +36,9 @@
         justify-content: center;
         width: 100%;
         padding: 64px;
+        @media only screen and (max-width: 768px) {
+            padding: 0;
+        }
       }
       
       .pricing-card {
@@ -101,6 +110,9 @@
         padding-bottom: 16px;
         color: #a3a3a3;
         font-size: 16px;
+        @media only screen and (max-width: 768px) {
+            font-size: 12px;
+        }
         font-weight: lighter;
         text-align: left;
       }
