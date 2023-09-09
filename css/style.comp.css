@@ -130,7 +130,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
       padding-top: 1rem; }
   .container .developer .socials {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 0.5rem;
     column-gap: 1rem; }
     .container .developer .socials li {
@@ -183,8 +183,7 @@ body {
 .reality {
   display: grid;
   grid-template-columns: minmax(14rem, 1fr) repeat(6, 1fr) minmax(14rem, 1fr);
-  grid-template-rows: 12rem repeat(8, 1fr);
-  height: 100vh; }
+  grid-template-rows: 12rem repeat(8, 1fr); }
   .reality .header-stone {
     transform: rotate(72deg); }
   .reality__header {
