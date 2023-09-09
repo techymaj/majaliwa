@@ -202,11 +202,14 @@ body {
       align-items: center; }
       .reality__header h1 span {
         padding-left: 2rem;
-        color: crimson;
         font-weight: 300; }
         @media only screen and (max-width: 48em) {
           .reality__header h1 span {
             display: none; } }
+  .reality__header {
+    color: crimson; }
+    .reality__header span a {
+      color: crimson; }
   .reality__project-showcase {
     text-align: center;
     padding: 5rem;
@@ -258,7 +261,40 @@ body {
     .reality__project-showcase .project__google-play a img {
       width: 50%; }
 
+.space__grid {
+  display: grid;
+  grid-template-columns: minmax(14rem, 1fr) repeat(6, 1fr) minmax(14rem, 1fr);
+  grid-template-rows: 12rem repeat(8, 1fr);
+  background-color: #171717; }
+  .space__grid .header-stone {
+    transform: rotate(72deg); }
+  .space__grid .space__header {
+    grid-column: 2 / 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media only screen and (max-width: 48em) {
+      .space__grid .space__header {
+        grid-column: 1 / -1;
+        padding: 0 5rem; } }
+    .space__grid .space__header span {
+      font-weight: bold; }
+    .space__grid .space__header h1 {
+      display: flex;
+      align-items: center; }
+      .space__grid .space__header h1 span {
+        padding-left: 2rem;
+        font-weight: 300; }
+        @media only screen and (max-width: 48em) {
+          .space__grid .space__header h1 span {
+            display: none; } }
+  .space__grid .space__header span {
+    color: #e4e4e7; }
+    .space__grid .space__header span a {
+      color: #e4e4e7; }
+
 .space__page {
+  grid-column: 1 / -1;
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -268,7 +304,8 @@ body {
     padding: 6rem 0; }
   .space__page h2 {
     color: #ffffff;
-    padding: 2rem 0; }
+    padding: 2rem 0;
+    margin-top: 6rem; }
   .space__page .desc {
     color: #ffffff;
     padding: 1.2rem 28rem;
