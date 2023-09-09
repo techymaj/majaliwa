@@ -11,7 +11,7 @@ body {
     display: grid;
     grid-template-columns: minmax(14rem, 1fr) repeat(6, 1fr) minmax(14rem, 1fr);
     grid-template-rows: 12rem repeat(8, 1fr);
-    height: 100vh;
+    // height: 100vh;
 
     .header-stone {
         transform: rotate(72deg);
