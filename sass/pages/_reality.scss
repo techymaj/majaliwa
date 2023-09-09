@@ -18,34 +18,12 @@ body {
     }
 
 
+    @include header;
     &__header {
-        grid-column: 2 / 8;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @media only screen and (max-width: 48em) {
-            grid-column: 1 / -1;
-            padding: 0 5rem;
-        }
-
+        color: crimson;
         span {
-            font-weight: bold;
-        }
-
-        h1 {
-            display: flex;
-            align-items: center;
-
-            span {
-                padding-left: 2rem;
+            a {
                 color: crimson;
-                font-weight: 300;
-
-                @media only screen and (max-width: 48em) {
-                    display: none;
-                }
             }
         }
     }
