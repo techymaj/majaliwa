@@ -44,7 +44,7 @@
         All plans include one-click install, 99.9% uptime,
         24/7 security monitoring and an easy-to-use control panel.
       </p>
-      <section class="pricing-plans">
+      <section id="hosting" class="pricing-plans">
         <div class="pricing-card basic">
           <div class="heading">
             <h4>BASIC</h4>
@@ -223,9 +223,9 @@
       <section class="cms">
         <div class="cms__image">
           <img src="./assets/services/cms.jpg" alt="cms">
-          <div class="button">Read More</div>
+          <div class="button"><a href="#cms_popup">Read More</a></div>
         </div>
-        <div class="cms__content">
+        <div id="cms" class="cms__content">
           <!-- Generate content about Content management system as a service -->
           <h2>Content Management Systems</h2>
           <p class="desc">
@@ -233,29 +233,29 @@
             This means that we will manage your website content for you.
             All you have to do is send us the content and we will do the rest.
           </p>
-          <div class="button">Read More</div>
+          <div class="button"><a href="#cms_popup">Read More</a></div>
         </div>
       </section>
-      <section class="website">
+      <section id="website" class="website">
         <div class="website__content">
           <!-- Generate content about Website design and development -->
-          <h2>Website Design & Development</h2>
+          <h2>Website Application Design & Development</h2>
           <p class="desc">
             We offer website design and development services.
             We will design and develop your website for you.
             All you have to do is send us the content and we will do the rest. 
           </p>
-          <div class="button">Read More</div>
+          <div class="button"><a href="#website_popup">Read More</a></div> 
         </div>
         <div class="website__image">
           <img src="./assets/services/website.jpg" alt="website">
-          <div class="button">Read More</div>
+          <div class="button"><a href="#website_popup">Read More</a></div> 
         </div>
       </section>
-      <section class="app">
+      <section id="app" class="app">
         <div class="app__video">
           <video autoplay loop muted src="./assets/video/sessions.mp4"></video>
-          <div class="button">Read More</div>
+          <div class="button"><a href="#app_popup">Read More</a></div> 
         </div>
         <div class="app__content">
           <!-- Generate content about App design and development -->
@@ -265,7 +265,7 @@
             We will design and develop your app for you.
             All you have to do is send us the content and we will do the rest. 
           </p>
-          <div class="button">Read More</div>
+          <div class="button"><a href="#app_popup">Read More</a></div> 
         </div>
       </section>
       <div class="coming-soon">
@@ -278,8 +278,64 @@
       </div>
     </main>
   </div>
-  <div class="cms__more">
-
+  <div id="cms_popup" class="popup-container popup-style-3">
+    <div class="popup-content">
+      <a href="#cms" class="close">&times;</a>
+      <h3>Content Management Systems</h3>
+      <p>We use, by default the <a href="https://wordpress.org">WordPress</a> eco system to design & build websites</p>
+      <p>In case you wish to use another Eco System, please reach out to us at <a href="mailto:cms@majaliwa.tech">cms@majaliwa.tech</a></p>
+      <p>For custom designs, and any extra services like e-commerce, reach out to us with the subject <strong>CMS EXTRAS</strong> at <a href="mailto:cms@majaliwa.tech">cms@majaliwa.tech</a> for a quotation</p>
+      <br>
+      <p>For a one time fee of <span class="starting-price">$500</span></p>
+      <p>You get:</p>
+      <ul>
+        <li>Free basic hosting for 1 year and all it's <a href="#hosting">perks</a></li>
+        <li>Free domain name for 1 year</li>
+        <li>Free premium theme</li>
+      </ul>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="JTTBR4N92DCPL" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
+      </form>
+    </div>
+  </div>
+  <div id="website_popup" class="popup-container popup-style-3">
+    <div class="popup-content">
+      <a href="#website" class="close">&times;</a>
+      <h3>Web Application Design & Development</h3><br>
+      <p>For a one time fee of <span class="starting-price">$5000</span></p>
+      <p>You get:</p>
+      <ul>
+        <li>Free <a href="http://firebase.com">firebase</a> hosting for 1 year</li>
+        <li>Free domain name for 1 year</li>
+      </ul>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="YUA9DMUTSTBA2" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
+      </form>
+    </div>
+  </div>
+  <div id="app_popup" class="popup-container popup-style-3">
+    <div class="popup-content">
+      <a href="#app" class="close">&times;</a>
+      <h3>Mobile Application Design & Development</h3><br>
+      <p>For a one time fee of <span class="starting-price">$5000</span></p>
+      <!-- <p>You get:</p>
+      <ul>
+        <li>Free <a href="http://firebase.com">firebase</a> hosting for 1 year</li>
+        <li>Free domain name for 1 year</li>
+      </ul> -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="8NMB6QJGTC8CC" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
+      </form>
+    </div>
   </div>
 </body>
 

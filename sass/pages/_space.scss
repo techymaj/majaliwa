@@ -61,13 +61,13 @@
   }
 
   .pricing-plans {
-    gap: 32px;
+    gap: 16px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    padding: 64px;
+    padding: 32px;
     @media only screen and (max-width: 768px) {
       padding: 0;
     }
