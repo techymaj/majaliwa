@@ -5,3 +5,15 @@
 .header-stone {
     width: 6rem;
 }
+
+.button {
+    width: 18rem;
+    height: 4rem;
+    color: #e4e4e4;
+    background-color: red;
+    font-size: 2rem;
+    border-radius: .6rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
