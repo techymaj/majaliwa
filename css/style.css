@@ -27,6 +27,21 @@ body {
   to {
     transform: rotate(359deg); } }
 
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; }
+  50% {
+    border-color: orange; } }
+
 /*
 MEDIA QUERY MANAGER
 
@@ -530,7 +545,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 8rem;
-    column-gap: 2rem; }
+    column-gap: 8rem; }
     @media only screen and (max-width: 900px) {
       .space__page .app {
         padding: 8rem 3rem; } }
@@ -574,6 +589,34 @@ body {
         @media only screen and (max-width: 900px) {
           .space__page .app__content .desc {
             text-align: center; } }
+  .space__page .coming-soon {
+    display: grid;
+    row-gap: 2rem;
+    text-align: center;
+    grid-template-rows: repeat(3, min-content);
+    align-content: center;
+    min-height: 100vh;
+    background-color: #171717; }
+    .space__page .coming-soon span:last-child {
+      overflow: hidden;
+      /* Ensures the content is not revealed until the animation */
+      border-right: 0.15em solid orange;
+      /* The typwriter cursor */
+      margin: 0 auto;
+      /* Gives that scrolling effect as the typing happens */
+      letter-spacing: 0.15em;
+      /* Adjust as needed */
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; }
+    .space__page .coming-soon h2 {
+      color: #ffffff;
+      padding: 0;
+      margin-top: 0; }
+    .space__page .coming-soon p {
+      color: #e4e4e7;
+      font-size: 2rem; }
+    .space__page .coming-soon span {
+      color: #0891b2;
+      font-size: 4rem; }
 
 .developer__stones--reality {
   position: absolute;

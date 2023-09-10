@@ -320,7 +320,7 @@
     @media only screen and (max-width: 900px) {
       padding: 8rem 3rem;
     }
-    column-gap: 2rem;
+    column-gap: 8rem;
 
     &__video {
       display: grid;
@@ -371,6 +371,37 @@
           text-align: center;
         }
       }
+    }
+  }
+  .coming-soon {
+    display: grid;
+    // place-items: center;
+    row-gap: 2rem;
+    text-align: center;
+    grid-template-rows: repeat(3, min-content);
+    align-content: center;
+    min-height: 100vh;
+    background-color: #171717;
+  
+    span:last-child {
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: 0.15em solid orange; /* The typwriter cursor */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: 0.15em; /* Adjust as needed */
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    h2 {
+      color: #ffffff;
+      padding: 0;
+      margin-top: 0;
+    }
+    p {
+      color: #e4e4e7;
+      font-size: 2rem;
+    }
+    span {
+      color: #0891b2;
+      font-size: 4rem;
     }
   }
 }
