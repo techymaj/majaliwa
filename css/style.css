@@ -320,7 +320,8 @@ body {
     font-size: 4rem; }
     @media only screen and (max-width: 768px) {
       .space__page h2 {
-        text-align: center; } }
+        text-align: center;
+        font-size: 3rem; } }
   .space__page .desc {
     color: #ffffff;
     padding: 1.2rem 28rem;
@@ -433,6 +434,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
     padding: 8rem;
     column-gap: 2rem; }
+    @media only screen and (max-width: 900px) {
+      .space__page .cms {
+        padding: 8rem 3rem; } }
     .space__page .cms__image {
       display: grid;
       row-gap: 2rem;
@@ -465,7 +469,8 @@ body {
         margin: 0; }
         @media only screen and (max-width: 900px) {
           .space__page .cms__content h2 {
-            text-align: center; } }
+            text-align: center;
+            font-size: 3rem; } }
       .space__page .cms__content .desc {
         padding: 2rem 0;
         text-align: justify; }
@@ -477,6 +482,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
     padding: 8rem;
     column-gap: 2rem; }
+    @media only screen and (max-width: 900px) {
+      .space__page .website {
+        padding: 8rem 3rem; } }
     .space__page .website__image {
       display: grid;
       row-gap: 2rem;
@@ -509,12 +517,62 @@ body {
         margin: 0; }
         @media only screen and (max-width: 900px) {
           .space__page .website__content h2 {
-            text-align: center; } }
+            text-align: center;
+            font-size: 3rem; } }
       .space__page .website__content .desc {
         padding: 2rem 0;
         text-align: justify; }
         @media only screen and (max-width: 900px) {
           .space__page .website__content .desc {
+            text-align: center; } }
+  .space__page .app {
+    background-color: #010101;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8rem;
+    column-gap: 2rem; }
+    @media only screen and (max-width: 900px) {
+      .space__page .app {
+        padding: 8rem 3rem; } }
+    .space__page .app__video {
+      display: grid;
+      row-gap: 2rem;
+      place-items: center; }
+      .space__page .app__video .button {
+        display: none; }
+        @media only screen and (max-width: 900px) {
+          .space__page .app__video .button {
+            display: grid; } }
+      @media only screen and (max-width: 900px) {
+        .space__page .app__video {
+          grid-column: 1 / -1;
+          grid-row: 2 / 3; }
+          .space__page .app__video video {
+            width: 100%; } }
+    .space__page .app__content {
+      display: grid;
+      align-items: center;
+      grid-template-rows: repeat(3, min-content);
+      align-content: center; }
+      @media only screen and (max-width: 900px) {
+        .space__page .app__content {
+          grid-column: 1 / -1;
+          grid-row: 1 / 2; }
+          .space__page .app__content .button {
+            display: none; } }
+      .space__page .app__content h2 {
+        font-size: 4rem;
+        padding: 0;
+        margin: 0; }
+        @media only screen and (max-width: 900px) {
+          .space__page .app__content h2 {
+            text-align: center;
+            font-size: 3rem; } }
+      .space__page .app__content .desc {
+        padding: 2rem 0;
+        text-align: justify; }
+        @media only screen and (max-width: 900px) {
+          .space__page .app__content .desc {
             text-align: center; } }
 
 .developer__stones--reality {
