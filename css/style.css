@@ -510,10 +510,8 @@ body {
     color: var(--col);
     transition: all 0.3s ease; }
   .space__page .eco-badge {
-    padding-bottom: 64px; }
-    @media only screen and (max-width: 768px) {
-      .space__page .eco-badge {
-        padding-top: 64px; } }
+    padding-bottom: 64px;
+    padding-top: 64px; }
   .space__page .cms {
     background-color: #010101;
     display: grid;
