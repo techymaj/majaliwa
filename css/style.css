@@ -55,13 +55,16 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 .button {
   width: 18rem;
   height: 4rem;
-  color: #e4e4e4;
-  background-color: red;
+  color: #fff;
+  background-color: #0891b2;
   font-size: 2rem;
   border-radius: .6rem;
   display: grid;
   align-items: center;
   justify-items: center; }
+  .button:hover {
+    background-color: #066981;
+    cursor: pointer; }
 
 .container {
   display: grid;
@@ -315,6 +318,9 @@ body {
     padding: 6rem 0 2rem 0;
     margin-top: 6rem;
     font-size: 4rem; }
+    @media only screen and (max-width: 768px) {
+      .space__page h2 {
+        text-align: center; } }
   .space__page .desc {
     color: #ffffff;
     padding: 1.2rem 28rem;
@@ -326,7 +332,8 @@ body {
         padding: 1.2rem 8rem; } }
     @media only screen and (max-width: 768px) {
       .space__page .desc {
-        padding: 1.2rem 2rem; } }
+        padding: 1.2rem 2rem;
+        text-align: center; } }
   .space__page .pricing-plans {
     gap: 32px;
     display: flex;
@@ -351,9 +358,9 @@ body {
   .space__page .pricing-card.basic {
     --col: #0891b2; }
   .space__page .pricing-card.standard {
-    --col: #059669; }
+    --col: #0891b2; }
   .space__page .pricing-card.premium {
-    --col: #c026d3; }
+    --col: #0891b2; }
   .space__page .pricing-card:hover {
     border-color: var(--col);
     background-color: #26262680;
@@ -415,6 +422,11 @@ body {
     background-color: transparent;
     color: var(--col);
     transition: all 0.3s ease; }
+  .space__page .eco-badge {
+    padding-bottom: 64px; }
+    @media only screen and (max-width: 768px) {
+      .space__page .eco-badge {
+        padding-top: 64px; } }
   .space__page .cms {
     background-color: #010101;
     display: grid;
@@ -451,9 +463,59 @@ body {
         font-size: 4rem;
         padding: 0;
         margin: 0; }
+        @media only screen and (max-width: 900px) {
+          .space__page .cms__content h2 {
+            text-align: center; } }
       .space__page .cms__content .desc {
         padding: 2rem 0;
         text-align: justify; }
+        @media only screen and (max-width: 900px) {
+          .space__page .cms__content .desc {
+            text-align: center; } }
+  .space__page .website {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8rem;
+    column-gap: 2rem; }
+    .space__page .website__image {
+      display: grid;
+      row-gap: 2rem;
+      place-items: center; }
+      .space__page .website__image .button {
+        display: none; }
+        @media only screen and (max-width: 900px) {
+          .space__page .website__image .button {
+            display: grid; } }
+      @media only screen and (max-width: 900px) {
+        .space__page .website__image {
+          grid-column: 1 / -1;
+          grid-row: 2 / 3; }
+          .space__page .website__image img {
+            width: 100%; } }
+    .space__page .website__content {
+      display: grid;
+      align-items: center;
+      grid-template-rows: repeat(3, min-content);
+      align-content: center; }
+      @media only screen and (max-width: 900px) {
+        .space__page .website__content {
+          grid-column: 1 / -1;
+          grid-row: 1 / 2; }
+          .space__page .website__content .button {
+            display: none; } }
+      .space__page .website__content h2 {
+        font-size: 4rem;
+        padding: 0;
+        margin: 0; }
+        @media only screen and (max-width: 900px) {
+          .space__page .website__content h2 {
+            text-align: center; } }
+      .space__page .website__content .desc {
+        padding: 2rem 0;
+        text-align: justify; }
+        @media only screen and (max-width: 900px) {
+          .space__page .website__content .desc {
+            text-align: center; } }
 
 .developer__stones--reality {
   position: absolute;

@@ -9,11 +9,15 @@
 .button {
     width: 18rem;
     height: 4rem;
-    color: #e4e4e4;
-    background-color: red;
+    color: #fff;
+    background-color: #0891b2;
     font-size: 2rem;
     border-radius: .6rem;
     display: grid;
     align-items: center;
     justify-items: center;
+    &:hover {
+        background-color: darken($color: #0891b2, $amount: 10);
+        cursor: pointer;
+    }
 }
