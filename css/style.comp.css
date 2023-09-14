@@ -665,7 +665,8 @@ body {
     grid-template-rows: repeat(3, min-content);
     align-content: center;
     min-height: 100vh;
-    background-color: #171717; }
+    background-color: #171717;
+    padding: 0 2rem; }
     .space__page .coming-soon span:last-child {
       overflow: hidden;
       /* Ensures the content is not revealed until the animation */
@@ -683,9 +684,15 @@ body {
     .space__page .coming-soon p {
       color: #e4e4e7;
       font-size: 2rem; }
+      @media only screen and (max-width: 400px) {
+        .space__page .coming-soon p {
+          font-size: 1.6rem; } }
     .space__page .coming-soon span {
       color: #0891b2;
       font-size: 4rem; }
+      @media only screen and (max-width: 400px) {
+        .space__page .coming-soon span {
+          font-size: 2.5rem; } }
 
 .developer__stones--reality {
   position: absolute;

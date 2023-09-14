@@ -382,6 +382,7 @@
     align-content: center;
     min-height: 100vh;
     background-color: #171717;
+    padding: 0 2rem;
   
     span:last-child {
       overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -398,10 +399,16 @@
     p {
       color: #e4e4e7;
       font-size: 2rem;
+      @media only screen and (max-width: 400px) {
+        font-size: 1.6rem;
+      }
     }
     span {
       color: #0891b2;
       font-size: 4rem;
+      @media only screen and (max-width: 400px) {
+        font-size: 2.5rem;
+      }
     }
   }
 }
