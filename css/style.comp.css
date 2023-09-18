@@ -696,7 +696,8 @@ body {
       display: grid;
       align-items: center;
       grid-template-rows: repeat(3, min-content);
-      align-content: center; }
+      align-content: center;
+      z-index: 2; }
       @media only screen and (max-width: 900px) {
         .space__page .app__content {
           grid-column: 1 / -1;

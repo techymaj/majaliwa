@@ -399,6 +399,7 @@
       align-items: center;
       grid-template-rows: repeat(3, min-content);
       align-content: center;
+      z-index: 2;
       @media only screen and (max-width: 900px) {
         grid-column: 1 / -1;
         grid-row: 1 / 2;
