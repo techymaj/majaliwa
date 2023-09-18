@@ -668,6 +668,9 @@ body {
       .space__page .app {
         padding: 8rem 3rem;
         column-gap: 0; } }
+    @media only screen and (max-width: 22.5em) {
+      .space__page .app {
+        grid-template-columns: 26rem 1fr; } }
     .space__page .app__video {
       display: grid;
       row-gap: 2rem;
