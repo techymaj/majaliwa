@@ -156,6 +156,9 @@
 
   img {
     width: 6rem;
+    @media only screen and (max-width: 20em) {
+      width: 4rem;
+    }
     animation: spin-stone 3s infinite linear;
 
     @media only screen and (min-width: 48em) {
