@@ -68,6 +68,9 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 
 .header-stone {
   width: 6rem; }
+  @media only screen and (max-width: 48em) {
+    .header-stone {
+      width: 4rem; } }
 
 .button {
   width: 18rem;
