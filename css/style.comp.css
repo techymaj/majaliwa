@@ -545,7 +545,7 @@ body {
     padding-bottom: 64px;
     padding-top: 64px; }
     @media only screen and (max-width: 768px) {
-      .space__page .eco-badge {
+      .space__page .eco-badge img {
         width: 12rem; } }
   @media only screen and (max-width: 56.25em) {
     .space__page .cms, .space__page .website, .space__page .app {
