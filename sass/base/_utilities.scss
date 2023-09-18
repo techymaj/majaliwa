@@ -4,6 +4,9 @@
 
 .header-stone {
     width: 6rem;
+    @media only screen and (max-width: 48em) {
+        width: 4rem;
+     }
 }
 
 .button {
