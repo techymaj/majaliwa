@@ -166,6 +166,9 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   height: 95vh; }
   @media only screen and (max-width: 48em) {
     .container {
+      height: 70vh; } }
+  @media only screen and (max-width: 26em) {
+    .container {
       height: 45vh; } }
   .container #background-video {
     width: 100vw;
