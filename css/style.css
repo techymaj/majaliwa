@@ -11,7 +11,9 @@ html {
 body {
   box-sizing: border-box;
   background-color: darkslategray;
-  font-family: "Major Mono Display", monospace; }
+  font-family: "Major Mono Display", monospace;
+  max-width: 144rem;
+  margin: 0 auto; }
 
 @keyframes spin {
   0% {
@@ -361,6 +363,11 @@ body {
     .reality__project-showcase .project__google-play a img {
       width: 50%; }
 
+@media only screen and (min-width: 90em) {
+  .space-body {
+    background-color: #2234ae;
+    background-image: linear-gradient(0deg, #2234ae 0%, #191714 74%); } }
+
 .space__grid {
   display: grid;
   grid-template-columns: minmax(14rem, 1fr) repeat(6, 1fr) minmax(14rem, 1fr);
@@ -537,6 +544,12 @@ body {
   .space__page .eco-badge {
     padding-bottom: 64px;
     padding-top: 64px; }
+    @media only screen and (max-width: 768px) {
+      .space__page .eco-badge {
+        width: 12rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .space__page .cms, .space__page .website, .space__page .app {
+      grid-template-columns: 30rem; } }
   .space__page .cms {
     background-color: #010101;
     display: grid;
@@ -545,7 +558,8 @@ body {
     column-gap: 2rem; }
     @media only screen and (max-width: 900px) {
       .space__page .cms {
-        padding: 8rem 3rem; } }
+        padding: 8rem 3rem;
+        column-gap: 0; } }
     .space__page .cms__image {
       display: grid;
       row-gap: 2rem;
@@ -576,10 +590,10 @@ body {
         font-size: 4rem;
         padding: 0;
         margin: 0; }
-        @media only screen and (max-width: 900px) {
+        @media only screen and (max-width: 1200px) {
           .space__page .cms__content h2 {
             text-align: center;
-            font-size: 3rem; } }
+            font-size: 2rem; } }
         @media only screen and (max-width: 425px) {
           .space__page .cms__content h2 {
             font-size: 1.2rem; } }
@@ -596,7 +610,8 @@ body {
     column-gap: 2rem; }
     @media only screen and (max-width: 900px) {
       .space__page .website {
-        padding: 8rem 3rem; } }
+        padding: 8rem 3rem;
+        column-gap: 0; } }
     .space__page .website__image {
       display: grid;
       row-gap: 2rem;
@@ -627,10 +642,10 @@ body {
         font-size: 4rem;
         padding: 0;
         margin: 0; }
-        @media only screen and (max-width: 900px) {
+        @media only screen and (max-width: 1200px) {
           .space__page .website__content h2 {
             text-align: center;
-            font-size: 3rem; } }
+            font-size: 2rem; } }
         @media only screen and (max-width: 425px) {
           .space__page .website__content h2 {
             font-size: 1.2rem; } }
@@ -643,12 +658,13 @@ body {
   .space__page .app {
     background-color: #010101;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 30rem 1fr;
     padding: 8rem;
     column-gap: 8rem; }
     @media only screen and (max-width: 900px) {
       .space__page .app {
-        padding: 8rem 3rem; } }
+        padding: 8rem 3rem;
+        column-gap: 0; } }
     .space__page .app__video {
       display: grid;
       row-gap: 2rem;
@@ -679,10 +695,10 @@ body {
         font-size: 4rem;
         padding: 0;
         margin: 0; }
-        @media only screen and (max-width: 900px) {
+        @media only screen and (max-width: 1200px) {
           .space__page .app__content h2 {
             text-align: center;
-            font-size: 3rem; } }
+            font-size: 2rem; } }
         @media only screen and (max-width: 425px) {
           .space__page .app__content h2 {
             font-size: 1.2rem; } }
