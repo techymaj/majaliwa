@@ -93,6 +93,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     cursor: pointer; }
 
 .popup-container {
+  z-index: 3;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
