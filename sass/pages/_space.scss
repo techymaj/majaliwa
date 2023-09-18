@@ -217,7 +217,9 @@
     padding-bottom: 64px;
     padding-top: 64px;
     @media only screen and (max-width: 768px) {
-      width: 12rem;
+      img {
+        width: 12rem;
+      }
     }
   }
 
