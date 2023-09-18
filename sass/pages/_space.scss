@@ -43,6 +43,10 @@
       text-align: center;
       font-size: 3rem;
     }
+    @media only screen and (max-width: 425px) {
+      
+      font-size: 1.2rem;
+    }
   }
 
   .desc {
@@ -54,6 +58,9 @@
     @media only screen and (max-width: 768px) {
       padding: 1.2rem 2rem;
       text-align: center;
+    }
+    @media only screen and (max-width: 425px) {
+      font-size: 10px;
     }
     text-align: center;
     font-size: 1.2rem;
@@ -78,6 +85,11 @@
     position: relative;
     min-width: 360px;
     padding: 32px;
+    @media only screen and (max-width: 400px) {
+      padding: 10px;
+      min-width: unset;
+      max-width: 300px;
+    }
     // padding-bottom: 96px;
     border-radius: 4px;
     border: 1px solid #262626;
@@ -114,6 +126,9 @@
     padding-bottom: 12px;
     color: var(--col);
     font-size: 24px;
+    @media only screen and (max-width: 425px) {
+      font-size: 20px;
+    }
     font-weight: normal;
   }
 
@@ -127,6 +142,9 @@
     position: relative;
     color: var(--col);
     font-size: 60px;
+    @media only screen and (max-width: 425px) {
+      font-size: 40px;
+    }
     font-weight: bold;
   }
 
@@ -139,11 +157,16 @@
   }
 
   .pricing-card .features li {
+    // list-style: none;
     padding-bottom: 16px;
     color: #a3a3a3;
     font-size: 16px;
     @media only screen and (max-width: 768px) {
       font-size: 12px;
+    }
+    @media only screen and (max-width: 425px) {
+      font-size: 10px;
+      padding-bottom: 0;
     }
     font-weight: lighter;
     text-align: left;
@@ -153,6 +176,9 @@
   .pricing-card .features li strong {
     color: #e4e4e7;
     font-size: 16px;
+    @media only screen and (max-width: 425px) {
+      font-size: 10px;
+    }
     text-align: left;
   }
 
@@ -238,6 +264,9 @@
           text-align: center;
           font-size: 3rem;
         }
+        @media only screen and (max-width: 425px) {
+          font-size: 1.2rem;
+        }
       }
 
       .desc {
@@ -299,6 +328,9 @@
         @media only screen and (max-width: 900px) {
           text-align: center;
           font-size: 3rem;
+        }
+        @media only screen and (max-width: 425px) {
+          font-size: 1.2rem;
         }
       }
 
@@ -362,6 +394,9 @@
           text-align: center;
           font-size: 3rem;
         }
+        @media only screen and (max-width: 425px) {
+          font-size: 1.2rem;
+        }
       }
 
       .desc {
@@ -399,14 +434,17 @@
     p {
       color: #e4e4e7;
       font-size: 2rem;
-      @media only screen and (max-width: 400px) {
-        font-size: 1.6rem;
+      @media only screen and (max-width: 425px) {
+        font-size: 12px;
       }
+    }
+    .expect {
+      line-height: 2em;
     }
     span {
       color: #0891b2;
       font-size: 4rem;
-      @media only screen and (max-width: 400px) {
+      @media only screen and (max-width: 425px) {
         font-size: 2.5rem;
       }
     }
