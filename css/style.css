@@ -312,7 +312,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   justify-items: center;
 }
-@media only screen and (min-width: 26.5625em) {
+@media only screen and (max-width: 26.5625em) {
   .mobile-stones {
     grid-template-columns: 1fr;
     row-gap: 1rem;
@@ -340,7 +340,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   display: flex;
   align-items: center;
 }
-@media only screen and (min-width: 26.5625em) {
+@media only screen and (max-width: 26.5625em) {
   .mobile-stones .ms {
     width: 20rem;
     column-gap: 3rem;
@@ -353,7 +353,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   padding-left: 1rem;
   cursor: pointer;
 }
-@media only screen and (min-width: 26.5625em) {
+@media only screen and (max-width: 26.5625em) {
   .mobile-stones .ms span {
     font-size: 1.8rem;
   }
