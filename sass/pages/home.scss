@@ -10,7 +10,7 @@
     height: 70vh;
   }
   @media only screen and (max-width: 26em) {
-    height: 45vh; 
+    height: 40vh; 
   }
 
   #background-video {
@@ -107,6 +107,10 @@
 .mobile-stones {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  @media only screen and (min-width: 26.5625em) {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+  }
   justify-items: center;
 
   .m {
@@ -134,9 +138,18 @@
   .ms {
     display: flex;
     align-items: center;
+    @media only screen and (min-width: 26.5625em) {
+      width: 20rem;
+      column-gap: 3rem;
+    }
 
     span {
+      
       font-size: 1.2rem;
+      @media only screen and (min-width: 26.5625em) {
+
+      font-size: 1.8rem;
+    }
       font-family: $developer-font;
       color: currentColor;
       padding-left: 1rem;
@@ -158,6 +171,10 @@
     width: 6rem;
     @media only screen and (max-width: 20em) {
       width: 4rem;
+    }
+    @media only screen and (min-width: 26.5625em) {
+
+      font-size: 4.8rem;
     }
     animation: spin-stone 3s infinite linear;
 
