@@ -77,7 +77,6 @@ body {
 .universe .stones .stone {
   grid-column: 1/2;
   grid-row: 1/2;
-  display: grid;
   width: 5.5rem;
   width: 0;
 }
@@ -132,8 +131,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transition: visibility 3s ease-in;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.5s cubic-bezier(0.04, 1.59, 0.83, 1.18);
   font-size: 62.5%;
   font-family: "Major Mono Display", monospace;
   visibility: hidden;

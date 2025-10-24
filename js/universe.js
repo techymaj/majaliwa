@@ -140,5 +140,7 @@ boomButton.addEventListener('click', () => {
 
     setTimeout(() => {
         developer.style.visibility = `visible`;
+        developer.style.transform = `translate(${-50}%, ${-50}%) scale(${1})`;
+        boomButton.remove();
     }, 45000)
 })
