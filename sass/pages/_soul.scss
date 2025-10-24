@@ -1,0 +1,49 @@
+.soul {
+  &__grid {
+    // background-color: crimson;
+    align-content: center;
+    display: grid;
+    height: 75svh;
+    row-gap: 6rem;
+  }
+  &__header {
+    display: grid;
+    justify-content: center;
+    row-gap: 10px;
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  &__page {
+    background-color: #fff;
+    box-shadow: 0px 10px 15px 2px lighten($color: black, $amount: 75%);
+    height: 150px;
+    line-height: 3.5em;
+    @include respond(phone) {
+      height: auto;
+    }
+    max-width: 600px;
+    @include respond(phone) {
+      width: 300px;
+    }
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    color: #bc4d04;
+    // border: 1px solid lighten($color: #BC4D04, $amount: 60%);
+
+    .desc {
+      font-size: 2rem;
+      @include respond(phone) {
+        font-size: 1.2rem;
+        line-height: 2em;
+      }
+      font-weight: bold;
+    }
+  }
+}
