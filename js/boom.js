@@ -1,16 +1,28 @@
-// alert('hi');
+const audioContext = new AudioContext();
 
-$("#nav-two a")
-    .each(function (i) {
-        if (i != 0) {
-            $("#beep-two")
-                .clone()
-                .attr("id", "beep-two" + i)
-                .appendTo($(this).parent());
-        }
-        $(this).data("beeper", i);
-    })
-    .mouseenter(function () {
-        $("#beep-two" + $(this).data("beeper"))[0].play();
-    });
-$("#beep-two").attr("id", "beep-two0");
+// get the audio element
+const audioElement = document.querySelector("audio");
+
+// pass it into the audio context
+const track = audioContext.createMediaElementSource(audioElement);
+
+track.connect(audioContext.destination);
+
+// Select our play button
+const playButton = document.querySelector("button");
+
+playButton.addEventListener("click", () => {
+  // Check if context is in suspended state (autoplay policy)
+  if (audioContext.state === "suspended") {
+    audioContext.resume();
+  }
+
+  // Play or pause track depending on state
+  if (playButton.dataset.playing === "false") {
+    audioElement.play();
+    playButton.dataset.playing = "true";
+  } else if (playButton.dataset.playing === "true") {
+    audioElement.pause();
+    playButton.dataset.playing = "false";
+  }
+});

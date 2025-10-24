@@ -1,19 +1,6 @@
-@import 'base/typography';        
+@import "base/typography";
 @import "base/base";
-@import "base/animations";   
- 
-@import "abstracts/mixins";
-@import "base/utilities";
+@import "base/animations";
 
-@import "pages/home";     
-@import "pages/reality"; 
-@import "pages/space";
-@import "pages/soul";
-
-@import 'components/stones/reality';     
-@import 'components/stones/soul';
-@import 'components/stones/time';
-@import 'components/stones/power'; 
-@import 'components/stones/mind';
-@import 'components/stones/space';                 
+@import "pages/universe";
 

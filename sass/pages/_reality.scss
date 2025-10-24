@@ -1,12 +1,3 @@
-body {
-    background-color: unset;
-    // background-image: url("../../assets/img/projects/artemisia-1.png");
-    // background-position: center center;
-    // background-repeat: no-repeat;
-    // background-size: 100%;
-    // background-attachment: fixed;
-}
-
 .reality {
     display: grid;
     grid-template-columns: minmax(14rem, 1fr) repeat(6, 1fr) minmax(14rem, 1fr);
@@ -18,7 +9,7 @@ body {
     }
 
 
-    @include header;
+    // @include header;
     &__header {
         color: crimson;
         span {
