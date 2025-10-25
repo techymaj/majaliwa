@@ -26,41 +26,68 @@
 
       width: 5.5rem;
       width: 0;
+
+      &.reality {
+        color: crimson;
+
+        &:hover > .reality__title {
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s linear;
+        }
+      }
+
+      &.power {
+        color: purple;
+        &:hover > .power__title {
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s linear;
+        }
+      }
+
+      &.time {
+        color: green;
+        &:hover > .time__title {
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s linear;
+        }
+      }
+
+      &.mind {
+        color: yellow;
+        &:hover > .mind__title {
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s linear;
+        }
+      }
+
+      &.space {
+        color: blue;
+
+        &:hover > .space__title {
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s linear;
+        }
+      }
+
+      &.soul {
+        color: orange;
+        &:hover > .soul__title {
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s linear;
+        }
+      }
+
       img {
         width: inherit;
         height: inherit;
         object-fit: contain;
         transition: width 0.3s ease-out;
-
-        &[data-color="crimson"] {
-          color: crimson;
-
-          &:hover ~ .reality__title {
-            opacity: 1;
-            visibility: visible;
-            transition: all 0.3s linear;
-          }
-        }
-
-        &[data-color="purple"] {
-          color: purple;
-        }
-
-        &[data-color="green"] {
-          color: green;
-        }
-
-        &[data-color="yellow"] {
-          color: yellow;
-        }
-
-        &[data-color="blue"] {
-          color: blue;
-        }
-
-        &[data-color="orange"] {
-          color: orange;
-        }
 
         &:hover {
           box-shadow: 0 0 3.6rem currentColor !important;
@@ -72,10 +99,15 @@
       }
     }
 
-    .reality {
+    .reality,
+    .space,
+    .mind,
+    .time,
+    .power,
+    .soul {
       &__title {
         font-family: "Major Mono Display", monospace;
-        color: crimson;
+        color: currentColor;
         visibility: hidden;
         position: absolute;
         top: 2.5rem;
@@ -92,7 +124,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    transition: all .5s cubic-bezier(.04, 1.59, .83, 1.18);
+    transition: all 0.5s cubic-bezier(0.04, 1.59, 0.83, 1.18);
 
     font-size: 62.5%;
     font-family: "Major Mono Display", monospace;

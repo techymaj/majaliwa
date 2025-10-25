@@ -80,34 +80,59 @@ body {
   width: 5.5rem;
   width: 0;
 }
+.universe .stones .stone.reality {
+  color: crimson;
+}
+.universe .stones .stone.reality:hover > .reality__title {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s linear;
+}
+.universe .stones .stone.power {
+  color: purple;
+}
+.universe .stones .stone.power:hover > .power__title {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s linear;
+}
+.universe .stones .stone.time {
+  color: green;
+}
+.universe .stones .stone.time:hover > .time__title {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s linear;
+}
+.universe .stones .stone.mind {
+  color: yellow;
+}
+.universe .stones .stone.mind:hover > .mind__title {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s linear;
+}
+.universe .stones .stone.space {
+  color: blue;
+}
+.universe .stones .stone.space:hover > .space__title {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s linear;
+}
+.universe .stones .stone.soul {
+  color: orange;
+}
+.universe .stones .stone.soul:hover > .soul__title {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s linear;
+}
 .universe .stones .stone img {
   width: inherit;
   height: inherit;
   object-fit: contain;
   transition: width 0.3s ease-out;
-}
-.universe .stones .stone img[data-color=crimson] {
-  color: crimson;
-}
-.universe .stones .stone img[data-color=crimson]:hover ~ .reality__title {
-  opacity: 1;
-  visibility: visible;
-  transition: all 0.3s linear;
-}
-.universe .stones .stone img[data-color=purple] {
-  color: purple;
-}
-.universe .stones .stone img[data-color=green] {
-  color: green;
-}
-.universe .stones .stone img[data-color=yellow] {
-  color: yellow;
-}
-.universe .stones .stone img[data-color=blue] {
-  color: blue;
-}
-.universe .stones .stone img[data-color=orange] {
-  color: orange;
 }
 .universe .stones .stone img:hover {
   box-shadow: 0 0 3.6rem currentColor !important;
@@ -116,9 +141,14 @@ body {
   animation: none !important;
   cursor: pointer;
 }
-.universe .stones .reality__title {
+.universe .stones .reality__title,
+.universe .stones .space__title,
+.universe .stones .mind__title,
+.universe .stones .time__title,
+.universe .stones .power__title,
+.universe .stones .soul__title {
   font-family: "Major Mono Display", monospace;
-  color: crimson;
+  color: currentColor;
   visibility: hidden;
   position: absolute;
   top: 2.5rem;
