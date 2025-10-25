@@ -6,8 +6,8 @@ const mind = document.querySelector(".mind");
 const time = document.querySelector(".time");
 
 const stoneImages = document.querySelectorAll(".stone img");
-// const allStones = document.getElementsByClassName("stone");
-// const arrayOfStones = Array.from(allStones);
+const allStones = document.getElementsByClassName("stone");
+const arrayOfHomePageStones = Array.from(allStones);
 
 const spaceImage = document.querySelector(".space img");
 const realityImage = document.querySelector(".reality img");
@@ -148,10 +148,26 @@ boomButton.addEventListener('click', () => {
     }, 45000)
 })
 
-// arrayOfStones.forEach(stone => {
-//     console.log("active?", stone)
-//     stone.addEventListener('click', () => {
-//         stone.classList.toggle("active")
-//     })
-// });
+arrayOfHomePageStones.forEach(stone => {
+
+    stone.addEventListener('click', () => {
+        const page = stone.classList;
+        const listOfClasses = Array.from(page);
+        const stoneClass = listOfClasses[1];
+        // console.log("active stone:", stoneClass)
+
+        setTimeout(() => {
+            const navStonesIterable = document.querySelectorAll("nav .stone");
+            const arrayOfNavStones = Array.from(navStonesIterable);
+            // console.log(arrayOfNavStones)
+
+            arrayOfNavStones.forEach((navStone) => {
+                if (navStone.classList[1] == stoneClass) {
+                    navStone.classList.toggle('active')
+                    return;
+                }
+            })
+        }, 500) // wait half a second for page to load so access to navStones is not undefined
+    })
+});
 
