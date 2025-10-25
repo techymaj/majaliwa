@@ -13,7 +13,7 @@ const mindImage = document.querySelector(".mind img");
 const timeImage = document.querySelector(".time img");
 const developer = document.querySelector(".developer");
 
-const arrayOfStones = Array.from(stoneImages);
+const arrayOfStoneImages = Array.from(stoneImages);
 
 const boomButton = document.querySelector("button");
 
@@ -40,7 +40,7 @@ boomButton.addEventListener('click', () => {
             stone.style.transform = `translate(${x}rem, ${y}rem)`;
             stone.style.transition = `transform 0.3s ease`;
 
-            arrayOfStones.forEach(stone => {
+            arrayOfStoneImages.forEach(stone => {
                 stone.style.animation = "spin-stone 3s infinite linear";
             });
         });
@@ -48,7 +48,7 @@ boomButton.addEventListener('click', () => {
     }, 5000)
 
     setTimeout(() => {
-        arrayOfStones.forEach(stone => {
+        arrayOfStoneImages.forEach(stone => {
             console.log("stone", stone)
             stone.style.boxShadow = `${0} ${0} ${3.6}rem ${stone.dataset.color}`;
             stone.style.border = `${2}px solid ${stone.dataset.color}`;
@@ -57,7 +57,7 @@ boomButton.addEventListener('click', () => {
     }, 14000)
 
     setTimeout(() => {
-        arrayOfStones.forEach(stone => {
+        arrayOfStoneImages.forEach(stone => {
             stone.style.boxShadow = `initial`;
             stone.style.border = `initial`;
             stone.style.borderRadius = `initial`;
