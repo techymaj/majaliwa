@@ -4,13 +4,18 @@ const power = document.querySelector(".power");
 const soul = document.querySelector(".soul");
 const mind = document.querySelector(".mind");
 const time = document.querySelector(".time");
+
 const stoneImages = document.querySelectorAll(".stone img");
+// const allStones = document.getElementsByClassName("stone");
+// const arrayOfStones = Array.from(allStones);
+
 const spaceImage = document.querySelector(".space img");
 const realityImage = document.querySelector(".reality img");
 const powerImage = document.querySelector(".power img");
 const soulImage = document.querySelector(".soul img");
 const mindImage = document.querySelector(".mind img");
 const timeImage = document.querySelector(".time img");
+
 const developer = document.querySelector(".developer");
 
 const arrayOfStoneImages = Array.from(stoneImages);
@@ -29,7 +34,6 @@ boomButton.addEventListener('click', () => {
             const angle = (i * 360 / stones.length) * (Math.PI / 180); // convert to radians
             const x = Math.cos(angle) * radius;
             const y = Math.sin(angle) * radius;
-            console.log("Stoned", stone)
 
             if (stone.classList.contains("time")) {
                 stone.style.width = `${7}rem`;
@@ -49,7 +53,6 @@ boomButton.addEventListener('click', () => {
 
     setTimeout(() => {
         arrayOfStoneImages.forEach(stone => {
-            console.log("stone", stone)
             stone.style.boxShadow = `${0} ${0} ${3.6}rem ${stone.dataset.color}`;
             stone.style.border = `${2}px solid ${stone.dataset.color}`;
             stone.style.borderRadius = `${16}px`;
@@ -144,3 +147,11 @@ boomButton.addEventListener('click', () => {
         boomButton.remove();
     }, 45000)
 })
+
+// arrayOfStones.forEach(stone => {
+//     console.log("active?", stone)
+//     stone.addEventListener('click', () => {
+//         stone.classList.toggle("active")
+//     })
+// });
+

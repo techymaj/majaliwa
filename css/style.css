@@ -14,7 +14,6 @@ body {
   box-sizing: border-box;
   background-color: #000;
   font-family: "Major Mono Display", monospace;
-  max-width: 144rem;
   margin: 0 auto;
 }
 
@@ -55,6 +54,25 @@ body {
     border-color: #ffffff;
   }
 }
+/*
+MEDIA QUERY MANAGER
+
+0 - 600px:      phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800px] is where our normal styles apply
+1800+px:        Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + Typography > general layout + grid > page layout > components
+
+1em = 16px 
+*/
 .boom {
   position: absolute;
   top: 2rem;
@@ -213,6 +231,130 @@ body {
 }
 .universe .developer__excerpt .socials .social-icon:hover {
   animation: none;
+}
+
+.soul__body {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-content: center;
+  padding: 0 0 0 6rem;
+  height: 100svh;
+}
+.soul__body nav {
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: 8rem;
+}
+.soul__body nav .stones {
+  display: grid;
+  grid-template-rows: repeat(6, max-content);
+  align-self: center;
+  justify-items: center;
+  row-gap: 4rem;
+}
+.soul__body nav .stones div[data-color=crimson].active {
+  color: crimson;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+.soul__body nav .stones div[data-color=purple].active {
+  color: purple;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+.soul__body nav .stones div[data-color=green].active {
+  color: green;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+.soul__body nav .stones div[data-color=yellow].active {
+  color: yellow;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+.soul__body nav .stones div[data-color=blue].active {
+  color: blue;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+.soul__body nav .stones div[data-color=orange].active {
+  color: orange;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+.soul__body nav .stones .stone {
+  width: 5.5rem;
+  display: flex;
+  column-gap: 5rem;
+  color: currentColor;
+  align-items: center;
+}
+.soul__body nav .stones .stone img {
+  width: inherit;
+  height: inherit;
+  object-fit: contain;
+}
+.soul__body nav img {
+  width: 5.5rem;
+  cursor: pointer;
+}
+.soul__body nav img[data-color=green] {
+  width: 7rem;
+}
+.soul__grid {
+  align-content: center;
+  display: grid;
+  height: 75svh;
+  row-gap: 6rem;
+}
+.soul__header {
+  display: grid;
+  justify-content: center;
+  row-gap: 10px;
+}
+.soul__header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.soul__page {
+  background-color: #fff;
+  box-shadow: 0px 10px 15px 2px #d55705;
+  height: 150px;
+  line-height: 3.5em;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  color: #bc4d04;
+}
+@media only screen and (max-width: 37.5em) {
+  .soul__page {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .soul__page {
+    width: 300px;
+  }
+}
+.soul__page .desc {
+  font-size: 2rem;
+  font-weight: bold;
+}
+@media only screen and (max-width: 37.5em) {
+  .soul__page .desc {
+    font-size: 1.2rem;
+    line-height: 2em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"
+    integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ"
+    crossorigin="anonymous"></script>
   <script defer src="./js/boom.js"></script>
   <script defer src="./js/universe.js"></script>
   <!--Start of Tawk.to Script-->
@@ -42,7 +45,7 @@
   </div>
   <div class="universe">
     <div class="stones">
-      <div class="stone space">
+      <div class="stone space" hx-trigger="click" hx-get="/space.html">
         <img data-color="blue" src="./assets/img/space.png" alt="space stone">
         <div class="space__title">
           <h1>Space</h1>
@@ -60,7 +63,7 @@
           <h1>Power</h1>
         </div>
       </div>
-      <div class="stone soul">
+      <div class="stone soul"  hx-trigger="click" hx-get="/soul.html" hx-target="body">
         <img data-color="orange" src="./assets/img/soul.png" alt="soul stone">
         <div class="soul__title">
           <h1>Soul</h1>
