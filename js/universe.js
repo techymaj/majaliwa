@@ -27,7 +27,12 @@ boomButton.addEventListener('click', () => {
         const radius = 38; // rem units
         const size = 5.5; // rem
 
-        const stones = [time, power, space, soul, reality, mind,];
+        let stones = [time, reality, power, space, soul,  mind,];
+
+        stones.map((_, index) => {
+            const randomPosition = Math.floor(Math.random() * 5);
+            swapStones(index, randomPosition, stones);
+        });
 
         // Set circle positions (every 60° apart)
         stones.forEach((stone, i) => {
@@ -223,21 +228,21 @@ function addRandomBlur(galaxy) {
       mask-repeat: no-repeat; 
       mask-position: center; 
     */
-   if (blur < 2) {
-    galaxy.style['mask-image'] = `url(../assets/star.png)`;
-    galaxy.style['mask-size'] = `contain`;
-    galaxy.style['mask-repeat'] = `no-repeat`;
-    galaxy.style['mask-position'] = `center`;
+    if (blur < 2) {
+        galaxy.style['mask-image'] = `url(../assets/star.png)`;
+        galaxy.style['mask-size'] = `contain`;
+        galaxy.style['mask-repeat'] = `no-repeat`;
+        galaxy.style['mask-position'] = `center`;
 
-    const width = Math.random() * 40;
-    const height = Math.random() * 45;
+        const width = Math.random() * 40;
+        const height = Math.random() * 45;
 
-    galaxy.style.width = `${width}px`;
-    galaxy.style.height = `${height}px`;
-    galaxy.style.backgroundColor = `#dbccdbe8`;
-    galaxy.style.filter = `blur(${blur + 10}px)`;
+        galaxy.style.width = `${width}px`;
+        galaxy.style.height = `${height}px`;
+        galaxy.style.backgroundColor = `#dbccdbe8`;
+        galaxy.style.filter = `blur(${blur + 10}px)`;
 
-   }
+    }
     galaxy.style.filter = `blur(${blur}px)`;
 }
 
@@ -267,4 +272,10 @@ function addRandomGalaxyColor(galaxy) {
 
     // Assuming 'galaxy' is a DOM element
     galaxy.style.backgroundColor = colors[index];
+}
+
+function swapStones(stoneIndex, randomPosition, array) {
+    let temp = array[stoneIndex];
+    array[stoneIndex] = array[randomPosition];
+    array[randomPosition] = temp;
 }
