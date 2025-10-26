@@ -49,6 +49,8 @@ boomButton.addEventListener('click', () => {
             });
         });
 
+        bigBang();
+
     }, 5000)
 
     setTimeout(() => {
@@ -171,3 +173,41 @@ arrayOfHomePageStones.forEach(stone => {
     })
 });
 
+function bigBang() {
+    const stonesDiv = document.querySelector(".stones")
+    const universe = stonesDiv.parentElement;
+
+    for (let i = 0; i < 100; i++) {
+        const galaxy = document.createElement("div");
+        galaxy.classList.add("galaxy");
+        assignRandomDimensions(galaxy);
+        assignRandomPosition(galaxy);
+        universe.insertBefore(galaxy, stonesDiv);
+    }
+}
+
+function assignRandomPosition(galaxy) {
+    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
+
+    const top = Math.random() * windowHeight;
+    if (top > windowHeight) {
+        top = Math.random() * 100;
+    }
+
+    const left = Math.random() * windowWidth;
+    if (left > windowWidth) {
+        left = Math.random() * 100;
+    }
+
+    galaxy.style.top = `${top}px`;
+    galaxy.style.left = `${left}px`;
+}
+
+function assignRandomDimensions(galaxy) {
+    const width = Math.random() * 10;
+    const height = Math.random() * 10;
+
+    galaxy.style.width = `${width}px`;
+    galaxy.style.height = `${height}px`;
+}

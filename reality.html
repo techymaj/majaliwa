@@ -1,56 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reality | Project Showcase">
-    <meta name="google-adsense-account" content="ca-pub-7994774274318917">
-    <title>Reality | Project Showcase</title>
-    <link rel="shortcut icon" href="./assets/img/reality.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/style.css">
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/64f73747b2d3e13950ee13cd/1h9iqvt7g';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7994774274318917"
-     crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <div class="reality">
-        <div class="reality__header">
-            <span class="mbuto"><a href="/">mbuto 31</a></span>
-            <h1><img class="header-stone" src="./assets/img/reality.png" alt="reality stone"> <span>Project Showcase</span></h1>
-        </div>
-        <div class="reality__project-showcase">
-            <h1 class="project__title">sessions</h1>
-            <div class="project__description">
-                Chat online as you listen to your favorite radio stations.
+<div class="reality">
+    <nav>
+        <span class="mbuto"><a href="/">mbuto 31</a></span>
+        <div class="stones">
+            <div data-color="blue" class="stone space" hx-trigger="click" hx-get="/space.html">
+                <img src="./assets/img/space.png" alt="space stone">
+                <div class="space__title">
+                    <h1>Space</h1>
+                </div>
             </div>
-            <div class="project__downloads">Users: 500K</div>
-            <div class="project__version">
-                Latest version: v1.0.1
+            <div data-color="crimson" class="stone reality">
+                <img src="./assets/img/reality.png" alt="reality stone">
+                <div class="reality__title">
+                    <h1>Reality</h1>
+                </div>
             </div>
-            <a href="https://github.com/techymaj/majaliwa/raw/main/releases/sessions/sessions_v1.0.0.apk" download class="project__download">Download</a>
-            <div class="project__google-play">
-                <a href='https://play.google.com/store/apps/details?id=tech.majaliwa.sessions&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+            <div data-color="purple" class="stone power">
+                <img src="./assets/img/power.png" alt="power stone">
+                <div class="power__title">
+                    <h1>Power</h1>
+                </div>
+            </div>
+            <div data-color="orange" class="stone soul" hx-trigger="click" hx-get="/soul.html" hx-target="body">
+                <img src="./assets/img/soul.png" alt="soul stone">
+                <div class="soul__title">
+                    <h1>Soul</h1>
+                </div>
+            </div>
+            <div data-color="yellow" class="stone mind">
+                <img src="./assets/img/mind.png" alt="mind stone">
+                <div class="mind__title">
+                    <h1>Mind</h1>
+                </div>
+            </div>
+            <div data-color="green" class="stone time">
+                <img src="./assets/img/time.png" alt="time stone">
+                <div class="time__title">
+                    <h1>Time</h1>
+                </div>
             </div>
         </div>
-    </div>
-</body>
-
-</html>
+    </nav>
+    <main class="reality__project-showcase">
+        <h1 class="project__title">sessions</h1>
+        <div class="project__description">
+            Chat online as you listen to your favorite radio stations.
+        </div>
+        <div class="project__downloads">Users: 500K</div>
+        <div class="project__version">
+            Latest version: v1.0.1
+        </div>
+        <a href="https://github.com/techymaj/majaliwa/raw/main/releases/sessions/sessions_v1.0.0.apk" download
+            class="project__download">Download</a>
+        <div class="project__google-play">
+            <a
+                href='https://play.google.com/store/apps/details?id=tech.majaliwa.sessions&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+                    alt='Get it on Google Play'
+                    src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+        </div>
+    </main>
+</div>

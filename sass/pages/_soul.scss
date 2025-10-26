@@ -16,6 +16,13 @@
       display: grid;
       grid-auto-rows: max-content;
       row-gap: 8rem;
+
+      .mbuto {
+        a {
+          color: currentColor;
+          color: orange;
+        }
+      }
       .stones {
         div[data-color="crimson"] {
           &.active {
