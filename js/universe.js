@@ -193,12 +193,12 @@ function assignRandomPosition(galaxy) {
     const windowWidth = window.innerWidth;
 
     const top = Math.random() * windowHeight;
-    if (top > windowHeight) {
+    if (top == windowHeight) {
         top = Math.random() * 100;
     }
 
     const left = Math.random() * windowWidth;
-    if (left > windowWidth) {
+    if (left == windowWidth) {
         left = Math.random() * 100;
     }
 
