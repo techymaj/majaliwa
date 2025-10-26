@@ -89,10 +89,8 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   justify-content: center;
 }
 .universe .galaxy {
-  background-color: rgba(219, 204, 219, 0.9098039216);
   position: absolute;
   border-radius: 50%;
-  filter: blur(3px);
 }
 .universe .stones {
   display: grid;
