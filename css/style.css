@@ -73,6 +73,78 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 
 1em = 16px 
 */
+nav {
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: 8rem;
+}
+nav .mbuto {
+  cursor: pointer;
+  text-decoration: underline;
+}
+nav .stones {
+  display: grid;
+  grid-template-rows: repeat(6, max-content);
+  align-self: center;
+  justify-items: center;
+  row-gap: 4rem;
+}
+nav .stones div[data-color=crimson].active {
+  color: crimson;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+nav .stones div[data-color=purple].active {
+  color: purple;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+nav .stones div[data-color=green].active {
+  color: green;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+nav .stones div[data-color=yellow].active {
+  color: yellow;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+nav .stones div[data-color=blue].active {
+  color: blue;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+nav .stones div[data-color=orange].active {
+  color: orange;
+  box-shadow: 0 0 3.6rem currentColor;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+}
+nav .stones .stone {
+  width: 5.5rem;
+  display: flex;
+  column-gap: 5rem;
+  color: currentColor;
+  align-items: center;
+}
+nav .stones .stone img {
+  width: inherit;
+  height: inherit;
+  object-fit: contain;
+}
+nav img {
+  width: 5.5rem;
+  cursor: pointer;
+}
+nav img[data-color=green] {
+  width: 7rem;
+}
+
 .boom {
   position: absolute;
   top: 2rem;
@@ -243,77 +315,6 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   align-content: center;
   padding: 0 0 0 6rem;
   height: 100svh;
-}
-.soul__body nav {
-  display: grid;
-  grid-auto-rows: max-content;
-  row-gap: 8rem;
-}
-.soul__body nav .mbuto a {
-  color: currentColor;
-  color: orange;
-}
-.soul__body nav .stones {
-  display: grid;
-  grid-template-rows: repeat(6, max-content);
-  align-self: center;
-  justify-items: center;
-  row-gap: 4rem;
-}
-.soul__body nav .stones div[data-color=crimson].active {
-  color: crimson;
-  box-shadow: 0 0 3.6rem currentColor;
-  border: 2px solid currentColor;
-  border-radius: 16px;
-}
-.soul__body nav .stones div[data-color=purple].active {
-  color: purple;
-  box-shadow: 0 0 3.6rem currentColor;
-  border: 2px solid currentColor;
-  border-radius: 16px;
-}
-.soul__body nav .stones div[data-color=green].active {
-  color: green;
-  box-shadow: 0 0 3.6rem currentColor;
-  border: 2px solid currentColor;
-  border-radius: 16px;
-}
-.soul__body nav .stones div[data-color=yellow].active {
-  color: yellow;
-  box-shadow: 0 0 3.6rem currentColor;
-  border: 2px solid currentColor;
-  border-radius: 16px;
-}
-.soul__body nav .stones div[data-color=blue].active {
-  color: blue;
-  box-shadow: 0 0 3.6rem currentColor;
-  border: 2px solid currentColor;
-  border-radius: 16px;
-}
-.soul__body nav .stones div[data-color=orange].active {
-  color: orange;
-  box-shadow: 0 0 3.6rem currentColor;
-  border: 2px solid currentColor;
-  border-radius: 16px;
-}
-.soul__body nav .stones .stone {
-  width: 5.5rem;
-  display: flex;
-  column-gap: 5rem;
-  color: currentColor;
-  align-items: center;
-}
-.soul__body nav .stones .stone img {
-  width: inherit;
-  height: inherit;
-  object-fit: contain;
-}
-.soul__body nav img {
-  width: 5.5rem;
-  cursor: pointer;
-}
-.soul__body nav img[data-color=green] {
-  width: 7rem;
 }
 .soul__grid {
   align-content: center;

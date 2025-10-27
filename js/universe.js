@@ -160,7 +160,7 @@ arrayOfHomePageStones.forEach(stone => {
 
     stone.addEventListener('click', () => {
         const page = stone.classList;
-        const listOfClasses = Array.from(page);
+        const listOfClasses = Array.from(page); // [stone, color]
         const stoneClass = listOfClasses[1];
         // console.log("active stone:", stoneClass)
 
@@ -172,6 +172,27 @@ arrayOfHomePageStones.forEach(stone => {
             arrayOfNavStones.forEach((navStone) => {
                 if (navStone.classList[1] == stoneClass) {
                     navStone.classList.toggle('active')
+                    let homeLink = document.querySelector("nav .mbuto");
+                    switch (stoneClass) {
+                        case 'soul':
+                            homeLink.style.color = "orange";
+                            break;
+                        case 'power':
+                            homeLink.style.color = "purple";
+                            break;
+                        case 'mind':
+                            homeLink.style.color = "orange";
+                            break;
+                        case 'reality':
+                            homeLink.style.color = "crimson";
+                            break;
+                        case 'time':
+                            homeLink.style.color = "green";
+                            break;
+                        case 'space':
+                            homeLink.style.color = "blue";
+                            break;
+                    }
                     return;
                 }
             })
@@ -195,7 +216,7 @@ class Universe {
         }
     }
 
-     assignRandomPosition(galaxy) {
+    assignRandomPosition(galaxy) {
         const windowHeight = window.innerHeight;
         const windowWidth = window.innerWidth;
 
@@ -213,7 +234,7 @@ class Universe {
         galaxy.style.left = `${left}px`;
     }
 
-     assignRandomDimensions(galaxy) {
+    assignRandomDimensions(galaxy) {
         const width = Math.random() * 8;
         const height = Math.random() * 15;
 
@@ -221,7 +242,7 @@ class Universe {
         galaxy.style.height = `${height}px`;
     }
 
-     addRandomBlur(galaxy) {
+    addRandomBlur(galaxy) {
         const blur = (Math.random() * 4) + 1;
         /* 
         if blur < 2
@@ -252,7 +273,7 @@ class Universe {
      * Assigns a random, universe-appropriate color to a galaxy element.
      * @param {HTMLElement} galaxy The DOM element representing a galaxy.
      */
-     addRandomGalaxyColor(galaxy) {
+    addRandomGalaxyColor(galaxy) {
         // Expanded color palette to better depict the universe
         const colors = [
             "white",     // Represents bright stars
