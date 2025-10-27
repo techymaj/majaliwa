@@ -1,106 +1,115 @@
 .reality {
+  &__body {
     display: grid;
-    grid-template-columns: minmax(14rem, 1fr) repeat(6, 1fr) minmax(14rem, 1fr);
-    grid-template-rows: 12rem repeat(8, 1fr);
-    // height: 100vh;
+    grid-template-columns: max-content 1fr;
+    align-content: center;
+    padding: 0 0 0 6rem;
+    height: 100svh;
 
-    .header-stone {
-        transform: rotate(72deg);
+    nav {
+      grid-row: 1 / -1;
+      grid-column: 1 / 2;
     }
+  }
+  // height: 100vh;
 
+  .header-stone {
+    transform: rotate(72deg);
+  }
 
-    // @include header;
-    &__header {
+  // @include header;
+  &__header {
+    color: crimson;
+    span {
+      a {
         color: crimson;
-        span {
-            a {
-                color: crimson;
-            }
-        }
+      }
+    }
+  }
+
+  &__project-showcase {
+    text-align: center;
+    padding: 5rem;
+    grid-row: 2 / -1;
+    width: 50rem;
+    margin: 10rem auto auto;
+    grid-column: 1 / -1;
+
+    background-color: transparent;
+    box-shadow: 0 0 5px rgba($color: red, $alpha: .5);
+    color: rgba($color: crimson, $alpha: .9);
+
+    display: grid;
+    row-gap: 2rem;
+    border-radius: 1rem;
+    justify-items: center;
+
+    @media only screen and (max-width: 32.5em) {
+      width: 38rem;
+      padding: 2rem;
     }
 
-    &__project-showcase {
-        text-align: center;
-        padding: 5rem;
-        grid-row: 2 / -1;
-        width: 50rem;
-        margin: 10rem auto auto;
-        grid-column: 1 / -1;
-
-        background-color: white;
-        box-shadow: 0 0 5px rgba($color: red, $alpha: 1.0); 
-
-        display: grid;
-        row-gap: 2rem;
-        border-radius: 1rem;
-        justify-items: center;
-
-        @media only screen and (max-width: 32.5em) {
-            width: 38rem;
-            padding: 2rem;
-        }
-
-        @media only screen and (max-width: 25em) {
-            width: 30rem;
-        }
-
-        .project {
-
-            &__title {
-                font-size: 5rem;
-
-                @media only screen and (max-width: 48em) {
-                    font-size: 3rem;
-                }
-            }
-
-            &__description {
-                font-size: 1.6rem;
-                line-height: 2.5rem;
-
-                @media only screen and (max-width: 48em) {
-                    font-size: 1.2rem;
-                }
-            }
-
-            &__version {
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-
-            &__downloads {
-                font-size: 2rem;
-                font-weight: 300;
-            }
-
-            &__download {
-                &:link,
-                &:visited,
-                &:active {
-
-                    text-decoration: none;
-                }
-                font-size: 1.8rem;
-                background-color: rgba($color: crimson, $alpha: .65); 
-                padding: 1.2rem 2rem;
-                color: white;
-                border-radius: 2rem;
-                transition: background-color 300ms linear;
-                
-                &:hover {
-                    background-color: rgba($color: crimson, $alpha: 1.0); 
-                }
-            }
-
-            &__google-play {
-                 
-                a {
-
-                    img {
-                        width: 50%;
-                    }
-                }
-            }
-        }
+    @media only screen and (max-width: 25em) {
+      width: 30rem;
     }
+
+    .project {
+        color: #8000008c;
+      &__title {
+        font-size: 5rem;
+        color: #8000008c;
+
+        @media only screen and (max-width: 48em) {
+          font-size: 3rem;
+        }
+      }
+
+      &__description {
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        color: #808080cc;
+
+        @media only screen and (max-width: 48em) {
+          font-size: 1.2rem;
+        }
+      }
+
+      &__version {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      &__downloads {
+        font-size: 2rem;
+        font-weight: 300;
+      }
+
+      &__download {
+        &:link,
+        &:visited,
+        &:active {
+          text-decoration: none;
+        }
+        font-size: 1.8rem;
+        background-color: rgba($color: #8000008c, $alpha: 0.65);
+        padding: 1.2rem 2rem;
+        color: #808080cc;
+        border-radius: 2rem;
+        transition: all 300ms linear;
+
+        &:hover {
+          background-color: rgba($color: #8000008c, $alpha: 1);
+          color: gray;
+        }
+      }
+
+      &__google-play {
+        a {
+          img {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
 }

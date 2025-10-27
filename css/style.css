@@ -129,7 +129,7 @@ nav .stones .stone {
   width: 5.5rem;
   display: flex;
   column-gap: 5rem;
-  color: currentColor;
+  color: transparent;
   align-items: center;
 }
 nav .stones .stone img {
@@ -366,6 +366,101 @@ nav img[data-color=green] {
     font-size: 1.2rem;
     line-height: 2em;
   }
+}
+
+.reality__body {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-content: center;
+  padding: 0 0 0 6rem;
+  height: 100svh;
+}
+.reality__body nav {
+  grid-row: 1/-1;
+  grid-column: 1/2;
+}
+.reality .header-stone {
+  transform: rotate(72deg);
+}
+.reality__header {
+  color: crimson;
+}
+.reality__header span a {
+  color: crimson;
+}
+.reality__project-showcase {
+  text-align: center;
+  padding: 5rem;
+  grid-row: 2/-1;
+  width: 50rem;
+  margin: 10rem auto auto;
+  grid-column: 1/-1;
+  background-color: transparent;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  color: rgba(220, 20, 60, 0.9);
+  display: grid;
+  row-gap: 2rem;
+  border-radius: 1rem;
+  justify-items: center;
+}
+@media only screen and (max-width: 32.5em) {
+  .reality__project-showcase {
+    width: 38rem;
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .reality__project-showcase {
+    width: 30rem;
+  }
+}
+.reality__project-showcase .project {
+  color: rgba(128, 0, 0, 0.5490196078);
+}
+.reality__project-showcase .project__title {
+  font-size: 5rem;
+  color: rgba(128, 0, 0, 0.5490196078);
+}
+@media only screen and (max-width: 48em) {
+  .reality__project-showcase .project__title {
+    font-size: 3rem;
+  }
+}
+.reality__project-showcase .project__description {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: rgba(128, 128, 128, 0.8);
+}
+@media only screen and (max-width: 48em) {
+  .reality__project-showcase .project__description {
+    font-size: 1.2rem;
+  }
+}
+.reality__project-showcase .project__version {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.reality__project-showcase .project__downloads {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.reality__project-showcase .project__download {
+  font-size: 1.8rem;
+  background-color: rgba(128, 0, 0, 0.65);
+  padding: 1.2rem 2rem;
+  color: rgba(128, 128, 128, 0.8);
+  border-radius: 2rem;
+  transition: all 300ms linear;
+}
+.reality__project-showcase .project__download:link, .reality__project-showcase .project__download:visited, .reality__project-showcase .project__download:active {
+  text-decoration: none;
+}
+.reality__project-showcase .project__download:hover {
+  background-color: maroon;
+  color: gray;
+}
+.reality__project-showcase .project__google-play a img {
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
