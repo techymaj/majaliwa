@@ -23,15 +23,16 @@ const arrayOfStoneImages = Array.from(stoneImages);
 const boomButton = document.querySelector("button");
 
 boomButton.addEventListener('click', () => {
+    const universe = new Universe();
     setTimeout(() => {
         const radius = 38; // rem units
         const size = 5.5; // rem
 
-        let stones = [time, reality, power, space, soul,  mind,];
+        let stones = [time, reality, power, space, soul, mind,];
 
         stones.map((_, index) => {
             const randomPosition = Math.floor(Math.random() * 5);
-            swapStones(index, randomPosition, stones);
+            Universe.swapStones(index, randomPosition, stones);
         });
 
         // Set circle positions (every 60° apart)
@@ -54,7 +55,7 @@ boomButton.addEventListener('click', () => {
             });
         });
 
-        bigBang();
+        universe.bigBang();
 
     }, 5000)
 
@@ -178,104 +179,103 @@ arrayOfHomePageStones.forEach(stone => {
     })
 });
 
-function bigBang() {
-    const stonesDiv = document.querySelector(".stones")
-    const universe = stonesDiv.parentElement;
+class Universe {
+    bigBang() {
+        const stonesDiv = document.querySelector(".stones")
+        const universe = stonesDiv.parentElement;
 
-    for (let i = 0; i < 50; i++) {
-        const galaxy = document.createElement("div");
-        galaxy.classList.add("galaxy");
-        assignRandomDimensions(galaxy);
-        assignRandomPosition(galaxy);
-        addRandomGalaxyColor(galaxy);
-        addRandomBlur(galaxy);
-        universe.insertBefore(galaxy, stonesDiv);
-    }
-}
-
-function assignRandomPosition(galaxy) {
-    const windowHeight = window.innerHeight;
-    const windowWidth = window.innerWidth;
-
-    const top = Math.random() * windowHeight;
-    if (top == windowHeight) {
-        top = Math.random() * 100;
+        for (let i = 0; i < 50; i++) {
+            const galaxy = document.createElement("div");
+            galaxy.classList.add("galaxy");
+            this.assignRandomDimensions(galaxy);
+            this.assignRandomPosition(galaxy);
+            this.addRandomGalaxyColor(galaxy);
+            this.addRandomBlur(galaxy);
+            universe.insertBefore(galaxy, stonesDiv);
+        }
     }
 
-    const left = Math.random() * windowWidth;
-    if (left == windowWidth) {
-        left = Math.random() * 100;
+     assignRandomPosition(galaxy) {
+        const windowHeight = window.innerHeight;
+        const windowWidth = window.innerWidth;
+
+        const top = Math.random() * windowHeight;
+        if (top == windowHeight) {
+            top = Math.random() * 100;
+        }
+
+        const left = Math.random() * windowWidth;
+        if (left == windowWidth) {
+            left = Math.random() * 100;
+        }
+
+        galaxy.style.top = `${top}px`;
+        galaxy.style.left = `${left}px`;
     }
 
-    galaxy.style.top = `${top}px`;
-    galaxy.style.left = `${left}px`;
-}
-
-function assignRandomDimensions(galaxy) {
-    const width = Math.random() * 8;
-    const height = Math.random() * 15;
-
-    galaxy.style.width = `${width}px`;
-    galaxy.style.height = `${height}px`;
-}
-
-function addRandomBlur(galaxy) {
-    const blur = (Math.random() * 4) + 1;
-    /* 
-    if blur < 2
-      mask-image: url('star.svg'); 
-      mask-size: contain; 
-      mask-repeat: no-repeat; 
-      mask-position: center; 
-    */
-    if (blur < 2) {
-        galaxy.style['mask-image'] = `url(../assets/star.png)`;
-        galaxy.style['mask-size'] = `contain`;
-        galaxy.style['mask-repeat'] = `no-repeat`;
-        galaxy.style['mask-position'] = `center`;
-
-        const width = Math.random() * 40;
-        const height = Math.random() * 45;
+     assignRandomDimensions(galaxy) {
+        const width = Math.random() * 8;
+        const height = Math.random() * 15;
 
         galaxy.style.width = `${width}px`;
         galaxy.style.height = `${height}px`;
-        galaxy.style.backgroundColor = `#dbccdbe8`;
-        galaxy.style.filter = `blur(${blur + 10}px)`;
-
     }
-    galaxy.style.filter = `blur(${blur}px)`;
-}
 
-/**
- * Assigns a random, universe-appropriate color to a galaxy element.
- * @param {HTMLElement} galaxy The DOM element representing a galaxy.
- */
-function addRandomGalaxyColor(galaxy) {
-    // Expanded color palette to better depict the universe
-    const colors = [
-        "white",     // Represents bright stars
-        "yellow",    // Represents older stars/galaxies
-        "blue",      // Represents hotter stars or cool nebulae
-        "red",       // Represents cool stars, dust clouds, or nebulae
-        "pink",      // Represents emission nebulae (H-alpha)
-        "cyan",      // Represents reflection nebulae
-        "magenta",   // A common artistic or false-color for space
-        "lime"       // Less common, but can represent certain gasses
-    ];
+     addRandomBlur(galaxy) {
+        const blur = (Math.random() * 4) + 1;
+        /* 
+        if blur < 2
+          mask-image: url('star.svg'); 
+          mask-size: contain; 
+          mask-repeat: no-repeat; 
+          mask-position: center; 
+        */
+        if (blur < 2) {
+            galaxy.style['mask-image'] = `url(../assets/star.png)`;
+            galaxy.style['mask-size'] = `contain`;
+            galaxy.style['mask-repeat'] = `no-repeat`;
+            galaxy.style['mask-position'] = `center`;
 
-    // FIX: Math.random() generates a number between 0 (inclusive) and 1 (exclusive).
-    // To cover all indices (0 to colors.length - 1), you must multiply by the array's length.
-    const index = Math.floor(Math.random() * colors.length);
+            const width = Math.random() * 40;
+            const height = Math.random() * 45;
 
-    console.log("Added color", colors[index]);
-    console.log("color index", index);
+            galaxy.style.width = `${width}px`;
+            galaxy.style.height = `${height}px`;
+            galaxy.style.backgroundColor = `#dbccdbe8`;
+            galaxy.style.filter = `blur(${blur + 10}px)`;
 
-    // Assuming 'galaxy' is a DOM element
-    galaxy.style.backgroundColor = colors[index];
-}
+        }
+        galaxy.style.filter = `blur(${blur}px)`;
+    }
 
-function swapStones(stoneIndex, randomPosition, array) {
-    let temp = array[stoneIndex];
-    array[stoneIndex] = array[randomPosition];
-    array[randomPosition] = temp;
+    /**
+     * Assigns a random, universe-appropriate color to a galaxy element.
+     * @param {HTMLElement} galaxy The DOM element representing a galaxy.
+     */
+     addRandomGalaxyColor(galaxy) {
+        // Expanded color palette to better depict the universe
+        const colors = [
+            "white",     // Represents bright stars
+            "yellow",    // Represents older stars/galaxies
+            "blue",      // Represents hotter stars or cool nebulae
+            "red",       // Represents cool stars, dust clouds, or nebulae
+            "pink",      // Represents emission nebulae (H-alpha)
+            "cyan",      // Represents reflection nebulae
+            "magenta",   // A common artistic or false-color for space
+            "lime"       // Less common, but can represent certain gasses
+        ];
+
+        // FIX: Math.random() generates a number between 0 (inclusive) and 1 (exclusive).
+        // To cover all indices (0 to colors.length - 1), you must multiply by the array's length.
+        const index = Math.floor(Math.random() * colors.length);
+
+        // Assuming 'galaxy' is a DOM element
+        galaxy.style.backgroundColor = colors[index];
+    }
+
+    static swapStones(stoneIndex, randomPosition, array) {
+        let temp = array[stoneIndex];
+        array[stoneIndex] = array[randomPosition];
+        array[randomPosition] = temp;
+    }
 }
