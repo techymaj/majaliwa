@@ -1,45 +1,27 @@
 {
-  "name": "majaliwa.tech",
-  "version": "1.0.0",
-  "description": "All there is to know about majaliwa & tech",
-  "main": "index.js",
+  "name": "majaliwa",
+  "version": "2.0.0",
+  "description": "Step into my reality",
+  "main": "app.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server --browser=firefox",
-    "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.8",
-    "concat": "^1.0.3",
-    "node-sass": "^7.0.1",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^10.0.0"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/techymaj/majaliwa.git"
   },
   "keywords": [
-    "Developer",
-    "Technology",
-    "Software",
-    "Mobile",
-    "Apps",
-    "Web",
-    "Apps",
-    "Desktop",
-    "Apps",
-    "Embedded",
-    "Systems"
+    "Majaliwa",
+    "M.",
+    "Wilfried"
   ],
-  "author": "techymaj",
+  "author": "Majaliwa M. Wilfried",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/techymaj/majaliwa/issues"
   },
-  "homepage": "https://github.com/techymaj/majaliwa#readme"
+  "homepage": "https://github.com/techymaj/majaliwa#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
