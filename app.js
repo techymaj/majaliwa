@@ -21,6 +21,10 @@ app.get('/soul', (req, res) => {
     res.render('soul', { active: "active", soulStone: "soul-stone", color: "orange" })
 })
 
+app.get('/universe', (req, res) => {
+    res.render('universe')
+})
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
