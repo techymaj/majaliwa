@@ -1,67 +1,28 @@
 script(src="../js/new-universe.js") 
 nav
-  span.mbuto(
-    style=`color: ${color}`
-  hx-target="body" 
-  hx-trigger="click" 
-  hx-get="/universe"
-  ) mbuto 31
+  span.mbuto(style=`color: ${color}` hx-target="body" hx-trigger="click" hx-get="/universe") mbuto 31
   .stones
-    .stone.space(
-      hx-get="/space" 
-      hx-trigger="click" 
-      data-color="blue"
-      )
-      img(
-        alt="space stone" 
-        src="/assets/img/space.png"
-        )
+    .stone.space(hx-get="/space" hx-trigger="click" data-color="blue")
+      img(alt="space stone" src="/assets/img/space.png")
       div(class="space__title")
         h1 Space
-    .stone.reality(
-      class=[realityStone && active]
-      hx-target="body" 
-      hx-get="/reality" 
-      hx-trigger="click" 
-      data-color="crimson"
-      )
-      img(
-        alt="reality stone" 
-        src="/assets/img/reality.png"
-        )
+    .stone.reality(class=[realityStone && active] hx-target="body" hx-get="/reality" hx-trigger="click" data-color="crimson")
+      img(alt="reality stone" src="/assets/img/reality.png")
       div(class="reality__title")
         h1 Reality
     .stone.power(data-color="purple")
-      img(
-        alt="power stone" 
-        src="/assets/img/power.png"
-        )
+      img(alt="power stone" src="/assets/img/power.png")
       div(class="power__title")
         h1 Power
-    .stone.soul(
-      class=[soulStone && active]
-      hx-target="body" 
-      hx-get="/soul" 
-      hx-trigger="click" 
-      data-color="orange"
-      )
-      img(
-        alt="soul stone" 
-        src="/assets/img/soul.png"
-        )
+    .stone.soul(class=[soulStone && active] hx-target="body" hx-get="/soul" hx-trigger="click" data-color="orange")
+      img(alt="soul stone" src="/assets/img/soul.png")
       div(class="soul__title")
         h1 Soul
     .stone.mind(data-color="yellow")
-      img(
-        alt="mind stone" 
-        src="/assets/img/mind.png"
-        )
+      img(alt="mind stone" src="/assets/img/mind.png")
       div(class="mind__title")
         h1 Mind
     .stone.time(data-color="green")
-      img(
-        alt="time stone" 
-        src="/assets/img/time.png"
-        )
+      img(alt="time stone" src="/assets/img/time.png")
       div(class="time__title")
         h1 Time
