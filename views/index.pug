@@ -2,60 +2,19 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(
-      content="width=device-width, initial-scale=1.0" 
-      name="viewport"
-      )
-    meta(
-      content="Creating websites and mobile apps for fun" 
-      name="description"
-      )
-    meta(
-      content="ca-pub-7994774274318917" 
-      name="google-adsense-account"
-      )
+    meta(content="width=device-width, initial-scale=1.0" name="viewport")
+    meta(content="Creating websites and mobile apps for fun" name="description")
     title majaliwa
-    link(
-      type="image/x-icon" 
-      href="/assets/img/jinx-round.png" 
-      rel="shortcut icon"
-      )
-    link(
-      href="https://fonts.googleapis.com" 
-      rel="preconnect"
-      )
-    link(
-      crossorigin="" 
-      href="https://fonts.gstatic.com" 
-      rel="preconnect"
-      )
-    link(
-      rel="stylesheet" 
-      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
-      )
-    link(
-      href="/css/style.css" 
-      rel="stylesheet"
-      )
+    link(type="image/x-icon" href="/assets/img/jinx-round.png" rel="shortcut icon")
+    link(href="https://fonts.googleapis.com" rel="preconnect")
+    link(crossorigin="" href="https://fonts.gstatic.com" rel="preconnect")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap")
+    link(href="/css/style.css" rel="stylesheet")
     block scripts 
-      script(
-      crossorigin="anonymous" 
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      )
-      script(
-        crossorigin="anonymous" 
-        integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ" 
-        src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"
-        )
-      script(
-        src="/js/boom.js" 
-        defer
-        )
-      script(
-        src="/js/universe.js" 
-        defer
-        )
+      script(crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js")
+      script(crossorigin="anonymous" integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ" src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js")
+      script(src="/js/boom.js" defer)
+      script(src="/js/universe.js" defer)
       // Start of Tawk.to Script
       script(type="text/javascript").
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
@@ -72,71 +31,32 @@ html(lang="en")
     block content 
       audio(src="/assets/audio/majaliwa-audio/majaliwa-intro.flac")
       .boom
-        button(
-          aria-checked="false" 
-          role="switch" 
-          data-playing="false"
-          )
+        button(aria-checked="false" role="switch" data-playing="false")
           span Play/Pause
       .universe
         .stones
-          .stone.space(
-            hx-get="/space.html" 
-            hx-trigger="click"
-            )
-            img(
-              alt="space stone" 
-              src="/assets/img/space.png" 
-              data-color="blue"
-              )
+          .stone.space(hx-get="/space.html" hx-trigger="click")
+            img(alt="space stone" src="/assets/img/space.png" data-color="blue")
             div(class="space__title")
               h1 Space
-          .stone.reality(
-            hx-target="body" 
-            hx-get="/reality" 
-            hx-trigger="click"
-            )
-            img(
-              alt="reality stone" 
-              src="/assets/img/reality.png" 
-              data-color="crimson"
-              )
+          .stone.reality(hx-target="body" hx-get="/reality" hx-trigger="click")
+            img(alt="reality stone" src="/assets/img/reality.png" data-color="crimson")
             div(class="reality__title")
               h1 Reality
           .stone.power
-            img(
-              alt="power stone" 
-              src="/assets/img/power.png" 
-              data-color="purple"
-              )
+            img(alt="power stone" src="/assets/img/power.png" data-color="purple")
             div(class="power__title")
               h1 Power
-          .stone.soul(
-            hx-target="body" 
-            hx-get="/soul" 
-            hx-trigger="click"
-            )
-            img(
-              alt="soul stone" 
-              src="/assets/img/soul.png" 
-              data-color="orange"
-              )
+          .stone.soul(hx-target="body" hx-get="/soul" hx-trigger="click")
+            img(alt="soul stone" src="/assets/img/soul.png" data-color="orange")
             div(class="soul__title")
               h1 Soul
           .stone.mind
-            img(
-              alt="mind stone" 
-              src="/assets/img/mind.png" 
-              data-color="yellow"
-              )
+            img(alt="mind stone" src="/assets/img/mind.png" data-color="yellow")
             div(class="mind__title")
               h1 Mind
           .stone.time
-            img(
-              alt="time stone" 
-              src="/assets/img/time.png" 
-              data-color="green"
-              )
+            img(alt="time stone" src="/assets/img/time.png" data-color="green")
             div(class="time__title")
               h1 Time
         .developer
@@ -146,36 +66,18 @@ html(lang="en")
             h3.title Developer:
             .socials
               li(class="social-icon__item")
-                a(
-                  rel="noopener noreferrer" 
-                  target="_blank" 
-                  href="https://www.linkedin.com/in/techymaj/"
-                  )
+                a(rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/techymaj/")
                   svg.social-icon
                     use(xlink:href="/assets/img/socials/sprite.svg#icon-linkedin")
               li(class="social-icon__item")
-                a(
-                  rel="noopener noreferrer" 
-                  target="_blank" 
-                  href="https://t.me/winds_of_mercy"
-                  )
+                a(rel="noopener noreferrer" target="_blank" href="https://t.me/winds_of_mercy")
                   svg.social-icon
                     use(xlink:href="/assets/img/socials/sprite.svg#icon-telegram")
               li(class="social-icon__item")
-                a(
-                  rel="noopener noreferrer" 
-                  target="_blank" 
-                  href="mailto:wilfriedmajaliwa@gmail.com"
-                  )
+                a(rel="noopener noreferrer" target="_blank" href="mailto:wilfriedmajaliwa@gmail.com")
                   svg.social-icon
                     use(xlink:href="/assets/img/socials/sprite.svg#icon-envelope")
               li(class="social-icon__item")
-                a(
-                  rel="noopener noreferrer" 
-                  target="_blank" 
-                  href="https://x.com/winds_of_mercy"
-                  )
+                a(rel="noopener noreferrer" target="_blank" href="https://x.com/winds_of_mercy")
                   svg.social-icon
                     use(xlink:href="/assets/img/socials/sprite.svg#icon-twitter")
-              li(class="social-icon__item")
-              li(class="social-icon__item")
