@@ -76,7 +76,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 nav {
   display: grid;
   grid-auto-rows: max-content;
-  row-gap: 8rem;
+  row-gap: 4rem;
 }
 nav .mbuto {
   cursor: pointer;
@@ -126,7 +126,7 @@ nav .stones div[data-color=orange].active {
   border-radius: 16px;
 }
 nav .stones .stone {
-  width: 5.5rem;
+  width: 3.5rem;
   display: flex;
   column-gap: 5rem;
   color: transparent;
@@ -372,8 +372,7 @@ nav img[data-color=green] {
   display: grid;
   grid-template-columns: max-content 1fr;
   align-content: center;
-  padding: 0 0 0 6rem;
-  height: 100svh;
+  padding: 6rem;
 }
 .reality__body nav {
   grid-row: 1/-1;

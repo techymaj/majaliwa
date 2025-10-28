@@ -1,100 +1,6 @@
 doctype html
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(
-      content="width=device-width, initial-scale=1.0" 
-      name="viewport"
-      )
-    meta(
-      content="Creating websites and mobile apps for fun" 
-      name="description"
-      )
-    meta(
-      content="ca-pub-7994774274318917" 
-      name="google-adsense-account"
-      )
-    title majaliwa
-    link(
-      type="image/x-icon" 
-      href="/assets/img/me.png" 
-      rel="shortcut icon"
-      )
-    link(
-      href="https://fonts.googleapis.com" 
-      rel="preconnect"
-      )
-    link(
-      crossorigin="" 
-      href="https://fonts.gstatic.com" 
-      rel="preconnect"
-      )
-    link(
-      rel="stylesheet" 
-      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
-      )
-    link(
-      href="/css/style.css" 
-      rel="stylesheet"
-      )
-    script(
-      crossorigin="anonymous" 
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      )
-    script(
-      crossorigin="anonymous" 
-      integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ" 
-      src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"
-      )
-    script(
-      src="/js/boom.js" 
-      defer=""
-      )
-    script(
-      src="/js/universe.js" 
-      defer=""
-      )
-    // Start of Tawk.to Script
-    script(type="text/javascript").
-      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/64f73747b2d3e13950ee13cd/1h9iqvt7g';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-        })();
-    // End of Tawk.to Script
-    script.
-      function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /* Loop through a collection of all HTML elements: */
-        z = document.getElementsByTagName("nav");
-        for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("w3-include-html");
-        if (file) {
-        /* Make an HTTP request using the attribute value as the file name: */
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-        if (this.readyState == 4) {
-        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-        /* Remove the attribute, and call this function once more: */
-        elmnt.removeAttribute("w3-include-html");
-        includeHTML();
-        }
-        }
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /* Exit the function: */
-        return;
-        }
-        }
-        }
+  include ../partials/head
   body
     audio(src="/assets/audio/majaliwa-audio/majaliwa-intro.flac")
     .boom
@@ -119,7 +25,7 @@ html(lang="en")
             h1 Space
         .stone.reality(
           hx-target="body" 
-          hx-get="/reality.html" 
+          hx-get="/reality" 
           hx-trigger="click"
           )
           img(

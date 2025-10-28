@@ -53,7 +53,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 nav {
   display: grid;
   grid-auto-rows: max-content;
-  row-gap: 8rem;
+  row-gap: 4rem;
 
   .mbuto {
       cursor: pointer;
@@ -107,7 +107,7 @@ nav {
     justify-items: center;
     row-gap: 4rem;
     .stone {
-      width: 5.5rem;
+      width: 3.5rem;
       display: flex;
       column-gap: 5rem;
       color: transparent;

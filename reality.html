@@ -1,93 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Creating websites and mobile apps for fun">
-    <meta name="google-adsense-account" content="ca-pub-7994774274318917">
-    <title>majaliwa</title>
-    <link rel="shortcut icon" href="./assets/img/me.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"
-        integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ"
-        crossorigin="anonymous"></script>
-    <script defer src="./js/boom.js"></script>
-    <script defer src="./js/universe.js"></script>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/64f73747b2d3e13950ee13cd/1h9iqvt7g';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
-    <script>
-        function includeHTML() {
-            var z, i, elmnt, file, xhttp;
-            /* Loop through a collection of all HTML elements: */
-            z = document.getElementsByTagName("nav");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                /*search for elements with a certain atrribute:*/
-                file = elmnt.getAttribute("w3-include-html");
-                if (file) {
-                    /* Make an HTTP request using the attribute value as the file name: */
-                    xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function () {
-                        if (this.readyState == 4) {
-                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                            /* Remove the attribute, and call this function once more: */
-                            elmnt.removeAttribute("w3-include-html");
-                            includeHTML();
-                        }
-                    }
-                    xhttp.open("GET", file, true);
-                    xhttp.send();
-                    /* Exit the function: */
-                    return;
-                }
-            }
-        }
-    </script>
-</head>
-
-<body>
-    <div class="reality__body">
-        <nav w3-include-html="./partials/navigation.html"></nav>
-        <main class="reality__project-showcase">
-            <h1 class="project__title">sessions</h1>
-            <div class="project__description">
-                Chat online as you listen to your favorite radio stations.
-            </div>
-            <div class="project__downloads">Users: 500K</div>
-            <div class="project__version">
-                Latest version: v1.0.1
-            </div>
-            <a href="https://github.com/techymaj/majaliwa/raw/main/releases/sessions/sessions_v1.0.0.apk" download
-                class="project__download">Download</a>
-            <div class="project__google-play">
-                <a
-                    href='https://play.google.com/store/apps/details?id=tech.majaliwa.sessions&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
-                        alt='Get it on Google Play'
-                        src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
-            </div>
-        </main>
-    </div>
-    <script>
-        includeHTML()
-    </script>
-</body>
-
-</html>
+<div class="reality__body">
+    <nav w3-include-html="./partials/navigation.html"></nav>
+    <main class="reality__project-showcase">
+        <h1 class="project__title">sessions</h1>
+        <div class="project__description">
+            Chat online as you listen to your favorite radio stations.
+        </div>
+        <div class="project__downloads">Users: 500K</div>
+        <div class="project__version">
+            Latest version: v1.0.1
+        </div>
+        <a href="https://github.com/techymaj/majaliwa/raw/main/releases/sessions/sessions_v1.0.0.apk" download
+            class="project__download">Download</a>
+        <div class="project__google-play">
+            <a
+                href='https://play.google.com/store/apps/details?id=tech.majaliwa.sessions&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+                    alt='Get it on Google Play'
+                    src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+        </div>
+    </main>
+</div>
