@@ -10,13 +10,17 @@ app.use('/assets', express.static(`${__dirname}/assets`));
 app.use('/js', express.static(`${__dirname}/js`));
 
 app.get('/', (req, res) => {
-  res.render('index')
+    res.render('index')
 })
 
 app.get('/reality', (req, res) => {
-  res.render('reality')
+    res.render('reality', { active: "active", realityStone: "reality-stone", color: "crimson" })
+})
+
+app.get('/soul', (req, res) => {
+    res.render('soul', { active: "active", soulStone: "soul-stone", color: "orange" })
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening on port ${port}`)
 })

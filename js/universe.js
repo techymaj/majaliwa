@@ -6,8 +6,6 @@ const mind = document.querySelector(".mind");
 const time = document.querySelector(".time");
 
 const stoneImages = document.querySelectorAll(".stone img");
-const allStones = document.getElementsByClassName("stone");
-const arrayOfHomePageStones = Array.from(allStones);
 
 const spaceImage = document.querySelector(".space img");
 const realityImage = document.querySelector(".reality img");
@@ -156,49 +154,6 @@ boomButton.addEventListener('click', () => {
     }, 45000)
 })
 
-arrayOfHomePageStones.forEach(stone => {
-
-    stone.addEventListener('click', () => {
-        const page = stone.classList;
-        const listOfClasses = Array.from(page); // [stone, color]
-        const stoneClass = listOfClasses[1];
-        // console.log("active stone:", stoneClass)
-
-        setTimeout(() => {
-            const navStonesIterable = document.querySelectorAll("nav .stone");
-            const arrayOfNavStones = Array.from(navStonesIterable);
-            // console.log(arrayOfNavStones)
-
-            arrayOfNavStones.forEach((navStone) => {
-                if (navStone.classList[1] == stoneClass) {
-                    navStone.classList.toggle('active')
-                    let homeLink = document.querySelector("nav .mbuto");
-                    switch (stoneClass) {
-                        case 'soul':
-                            homeLink.style.color = "orange";
-                            break;
-                        case 'power':
-                            homeLink.style.color = "purple";
-                            break;
-                        case 'mind':
-                            homeLink.style.color = "orange";
-                            break;
-                        case 'reality':
-                            homeLink.style.color = "crimson";
-                            break;
-                        case 'time':
-                            homeLink.style.color = "green";
-                            break;
-                        case 'space':
-                            homeLink.style.color = "blue";
-                            break;
-                    }
-                    return;
-                }
-            })
-        }, 500) // wait half a second for page to load so access to navStones is not undefined
-    })
-});
 
 class Universe {
     bigBang() {

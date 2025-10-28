@@ -1,12 +1,13 @@
 nav
   span.mbuto(
+    style=`color: ${color}`
   hx-target="body" 
   hx-trigger="click" 
   hx-get="/"
   ) mbuto 31
   .stones
     .stone.space(
-      hx-get="/space.html" 
+      hx-get="/space" 
       hx-trigger="click" 
       data-color="blue"
       )
@@ -17,6 +18,7 @@ nav
       div(class="space__title")
         h1 Space
     .stone.reality(
+      class=[realityStone && active]
       hx-target="body" 
       hx-get="/reality" 
       hx-trigger="click" 
@@ -36,8 +38,9 @@ nav
       div(class="power__title")
         h1 Power
     .stone.soul(
+      class=[soulStone && active]
       hx-target="body" 
-      hx-get="/soul.html" 
+      hx-get="/soul" 
       hx-trigger="click" 
       data-color="orange"
       )

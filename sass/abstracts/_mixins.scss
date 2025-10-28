@@ -58,6 +58,7 @@ nav {
   .mbuto {
       cursor: pointer;
       text-decoration: underline;
+      transition: all .3s linear;
   }
   .stones {
     div[data-color="crimson"] {

@@ -81,6 +81,7 @@ nav {
 nav .mbuto {
   cursor: pointer;
   text-decoration: underline;
+  transition: all 0.3s linear;
 }
 nav .stones {
   display: grid;
@@ -313,8 +314,7 @@ nav img[data-color=green] {
   display: grid;
   grid-template-columns: max-content 1fr;
   align-content: center;
-  padding: 0 0 0 6rem;
-  height: 100svh;
+  padding: 6rem;
 }
 .soul__grid {
   align-content: center;
