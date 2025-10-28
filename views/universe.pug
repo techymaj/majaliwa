@@ -4,7 +4,7 @@
             img(alt="space stone" src="/assets/img/space.png" data-color="blue")
             div(class="space__title")
                 h1 Space
-        .stone.reality(hx-target=".universe" hx-get="/reality" hx-trigger="click")
+        .stone.reality(hx-target=".universe" hx-swap="outerHTML" hx-get="/reality" hx-trigger="click")
             img(alt="reality stone" src="/assets/img/reality.png" data-color="crimson")
             div(class="reality__title")
                 h1  Reality
@@ -12,7 +12,7 @@
             img(alt="power stone" src="/assets/img/power.png" data-color="purple")
             div(class="power__title")
                 h1 Power
-        .stone.soul(hx-target=".universe" hx-get="/soul" hx-trigger="click")
+        .stone.soul(hx-target=".universe" hx-swap="outerHTML" hx-get="/soul" hx-trigger="click")
             img(alt="soul stone" src="/assets/img/soul.png" data-color="orange")
             div(class="soul__title")
                 h1 Soul

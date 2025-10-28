@@ -1,6 +1,6 @@
 script(src="../js/new-universe.js") 
 nav
-  span.mbuto(style=`color: ${color}` hx-target=".dash" hx-trigger="click" hx-get="/universe") mbuto 31
+  span.mbuto(style=`color: ${color}` hx-target=".dash" hx-swap="outerHTML" hx-trigger="click" hx-get="/universe") mbuto 31
   .stones
     .stone.space(hx-get="/space" hx-trigger="click" data-color="blue")
       img(alt="space stone" src="/assets/img/space.png")
