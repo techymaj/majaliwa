@@ -1,105 +1,104 @@
-doctype html
-html(lang="en")
-  include ../partials/head
-  body
+extends index.pug 
+
+block content
     .universe
-      .stones
-        .stone.space(
-          hx-get="/space.html" 
-          hx-trigger="click"
-          )
-          img(
-            alt="space stone" 
-            src="/assets/img/space.png" 
-            data-color="blue"
-            )
-          div(class="space__title")
-            h1 Space
-        .stone.reality(
-          hx-target="body" 
-          hx-get="/reality" 
-          hx-trigger="click"
-          )
-          img(
-            alt="reality stone" 
-            src="/assets/img/reality.png" 
-            data-color="crimson"
-            )
-          div(class="reality__title")
-            h1 Reality
-        .stone.power
-          img(
-            alt="power stone" 
-            src="/assets/img/power.png" 
-            data-color="purple"
-            )
-          div(class="power__title")
-            h1 Power
-        .stone.soul(
-          hx-target="body" 
-          hx-get="/soul" 
-          hx-trigger="click"
-          )
-          img(
-            alt="soul stone" 
-            src="/assets/img/soul.png" 
-            data-color="orange"
-            )
-          div(class="soul__title")
-            h1 Soul
-        .stone.mind
-          img(
-            alt="mind stone" 
-            src="/assets/img/mind.png" 
-            data-color="yellow"
-            )
-          div(class="mind__title")
-            h1 Mind
-        .stone.time
-          img(
-            alt="time stone" 
-            src="/assets/img/time.png" 
-            data-color="green"
-            )
-          div(class="time__title")
-            h1 Time
-      .developer
-        div(class="developer__image")
-        div(class="developer__excerpt")
-          h1.name Majaliwa M Wilfried
-          h3.title Developer:
-          .socials
-            li(class="social-icon__item")
-              a(
-                rel="noopener noreferrer" 
-                target="_blank" 
-                href="https://www.linkedin.com/in/techymaj/"
+        .stones
+            .stone.space(
+                hx-get="/space.html" 
+                hx-trigger="click"
                 )
-                svg.social-icon
-                  use(xlink:href="/assets/img/socials/sprite.svg#icon-linkedin")
-            li(class="social-icon__item")
-              a(
-                rel="noopener noreferrer" 
-                target="_blank" 
-                href="https://t.me/winds_of_mercy"
+                img(
+                alt="space stone" 
+                src="/assets/img/space.png" 
+                data-color="blue"
                 )
-                svg.social-icon
-                  use(xlink:href="/assets/img/socials/sprite.svg#icon-telegram")
-            li(class="social-icon__item")
-              a(
-                rel="noopener noreferrer" 
-                target="_blank" 
-                href="mailto:wilfriedmajaliwa@gmail.com"
+                div(class="space__title")
+                    h1 Space
+            .stone.reality(
+                hx-target="body" 
+                hx-get="/reality" 
+                hx-trigger="click"
                 )
-                svg.social-icon
-                  use(xlink:href="/assets/img/socials/sprite.svg#icon-envelope")
-            li(class="social-icon__item")
-              a(
-                rel="noopener noreferrer" 
-                target="_blank" 
-                href="https://x.com/winds_of_mercy"
+                img(
+                alt="reality stone" 
+                src="/assets/img/reality.png" 
+                data-color="crimson"
                 )
-                svg.social-icon
-                  use(xlink:href="/assets/img/socials/sprite.svg#icon-twitter")
-            li(class="social-icon__item")
-            li(class="social-icon__item")
+                div(class="reality__title")
+                    h1  Reality
+            .stone.power
+                img(
+                alt="power stone" 
+                src="/assets/img/power.png" 
+                data-color="purple"
+                )
+                div(class="power__title")
+                    h1 Power
+            .stone.soul(
+                hx-target="body" 
+                hx-get="/soul" 
+                hx-trigger="click"
+                )
+                img(
+                alt="soul stone" 
+                src="/assets/img/soul.png" 
+                data-color="orange"
+                )
+                div(class="soul__title")
+                    h1 Soul
+            .stone.mind
+                img(
+                alt="mind stone" 
+                src="/assets/img/mind.png" 
+                data-color="yellow"
+                )
+                div(class="mind__title")
+                    h1 Mind
+            .stone.time
+                img(
+                alt="time stone" 
+                src="/assets/img/time.png" 
+                data-color="green"
+                )
+                div(class="time__title")
+                    h1 Time
+        .developer
+            div(class="developer__image")
+            div(class="developer__excerpt")
+                h1.name Majaliwa M Wilfried
+                h3.title Developer:
+                .socials
+                    li(class="social-icon__item")
+                        a(
+                        rel="noopener noreferrer" 
+                        target="_blank" 
+                        href="https://www.linkedin.com/in/techymaj/"
+                        )
+                        svg.social-icon
+                            use(xlink:href="/assets/img/socials/sprite.svg#icon-linkedin")
+                    li(class="social-icon__item")
+                        a(
+                        rel="noopener noreferrer" 
+                        target="_blank" 
+                        href="https://t.me/winds_of_mercy"
+                        )
+                        svg.social-icon
+                            use(xlink:href="/assets/img/socials/sprite.svg#icon-telegram")
+                    li(class="social-icon__item")
+                        a(
+                        rel="noopener noreferrer" 
+                        target="_blank" 
+                        href="mailto:wilfriedmajaliwa@gmail.com"
+                        )
+                        svg.social-icon
+                            use(xlink:href="/assets/img/socials/sprite.svg#icon-envelope")
+                    li(class="social-icon__item")
+                        a(
+                        rel="noopener noreferrer" 
+                        target="_blank" 
+                        href="https://x.com/winds_of_mercy"
+                        )
+                        svg.social-icon
+                            use(xlink:href="/assets/img/socials/sprite.svg#icon-twitter")
+                    li(class="social-icon__item")
+                    li(class="social-icon__item")
