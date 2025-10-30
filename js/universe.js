@@ -172,8 +172,8 @@ class Universe {
     }
 
     assignRandomPosition(galaxy) {
-        const windowHeight = window.innerHeight;
-        const windowWidth = window.innerWidth;
+        const windowHeight = document.documentElement.clientHeight;
+        const windowWidth = document.documentElement.clientWidth;
 
         const top = Math.random() * windowHeight;
         if (top == windowHeight) {
