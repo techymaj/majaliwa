@@ -35,3 +35,33 @@ body {
     // h1, h2, h3, h4, h5, h6 {
     // }
 }
+
+@media (orientation: landscape) {
+  .check-orientation {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  .check-orientation {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 20rem;
+    min-width: 30rem;
+    max-width: 49rem;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    p {
+      font-size: 2rem;
+      text-align: center;
+      line-height: 1.6em;
+    }
+  }
+  .check-orientation + .universe {
+    display: none;
+  }
+}

@@ -10,7 +10,7 @@ html(lang="en")
     link(crossorigin="" href="https://fonts.gstatic.com" rel="preconnect")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap")
     link(href="/css/style.css" rel="stylesheet")
-    block scripts 
+    block scripts
       script(crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js")
       script(crossorigin="anonymous" integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ" src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js")
       script(src="/js/boom.js" defer)
@@ -28,7 +28,9 @@ html(lang="en")
           })();
       // End of Tawk.to Script
   body
-    block content 
+    block content
+      .check-orientation
+        p I haven't worked on this yet, go to desktop"
       .universe
         audio(src="/assets/audio/majaliwa-audio/majaliwa-intro.flac")
         .boom
