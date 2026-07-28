@@ -1,0 +1,243 @@
+.refund-body {
+
+    background-color: #171717;
+    padding: 4rem;
+
+    @media only screen and (min-width: 90em) {
+
+        background-color: #2234ae;
+
+        background-image: linear-gradient(135deg,
+                #111827 0%,
+                #1f2937 50%,
+                #030712 100%);
+
+    }
+
+}
+
+
+
+.refund__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(2rem, 1fr) minmax(300px, 900px) minmax(2rem, 1fr);
+
+    background-color: #171717;
+
+
+}
+
+
+
+.refund__page {
+
+    grid-column: 2;
+
+    min-height: 100vh;
+
+    padding: 5rem 0;
+
+
+
+    @media only screen and (max-width: 768px) {
+
+        padding: 3rem 1rem;
+
+    }
+
+}
+
+
+
+
+.refund__content {
+
+    background-color: #262626;
+
+    border: 1px solid #333;
+
+    border-radius: 12px;
+
+    padding: 4rem;
+
+    box-shadow:
+        0 0 40px rgba(0, 0, 0, .35);
+
+
+
+    @media only screen and (max-width:768px) {
+
+        padding: 2rem;
+
+    }
+
+
+    @media only screen and (max-width:425px) {
+
+        padding: 1.2rem;
+
+    }
+
+}
+
+
+
+
+.refund__header {
+
+    text-align: center;
+
+    padding-bottom: 3rem;
+
+    margin-bottom: 2rem;
+
+    border-bottom: 1px solid #333;
+
+
+
+    h1 {
+
+        color: #ffffff;
+
+        font-size: 4rem;
+
+        line-height: 1.2;
+
+        margin-bottom: 1rem;
+
+
+        @media only screen and (max-width:768px) {
+
+            font-size: 2.5rem;
+
+        }
+
+
+        @media only screen and (max-width:425px) {
+
+            font-size: 1.8rem;
+
+        }
+
+    }
+
+
+
+    .subtitle {
+
+        color: #a3a3a3;
+
+        font-size: 1rem;
+
+    }
+
+}
+
+
+
+
+.policy-section {
+
+    margin-bottom: 3rem;
+
+
+
+    h2 {
+
+        color: #0891b2;
+
+        font-size: 1.8rem;
+
+        margin-bottom: 1rem;
+
+
+
+        @media only screen and (max-width:425px) {
+
+            font-size: 1.3rem;
+
+        }
+
+    }
+
+
+
+    p {
+
+        color: #e4e4e7;
+
+        font-size: 1.05rem;
+
+        line-height: 1.9;
+
+        margin-bottom: 1rem;
+
+
+
+        @media only screen and (max-width:425px) {
+
+            font-size: .9rem;
+
+        }
+
+    }
+
+
+
+    strong {
+
+        color: #ffffff;
+
+    }
+
+}
+
+
+
+
+.policy-list {
+
+    padding-left: 2rem;
+
+
+    li {
+
+        color: #a3a3a3;
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+
+        margin-bottom: .8rem;
+
+
+
+        @media only screen and (max-width:425px) {
+
+            font-size: .85rem;
+
+        }
+
+    }
+
+}
+
+
+
+
+
+.contact-card {
+
+    background-color: #171717;
+
+    border-radius: 8px;
+
+    padding: 2rem;
+
+    border-left: 4px solid #0891b2;
+
+
+}
